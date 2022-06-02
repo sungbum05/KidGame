@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 
@@ -16,6 +17,10 @@ public class AntGameScene : MonoBehaviour
     int MaxGameCount = 5;
     [SerializeField]
     int CurGameCount = 0;
+    [SerializeField]
+    Image FadePanel;
+    [SerializeField]
+    float ShowTiem = 1.0f;
 
     [Space(10)]
     [SerializeField]
@@ -58,9 +63,33 @@ public class AntGameScene : MonoBehaviour
     [SerializeField]
     List<GameObject> ProgressPoint;
 
+    #region 게임 끝 연출
+    [Space(10)]
+    [SerializeField]
+    bool ClearChk = false;
+    [SerializeField]
+    Vector3 BallonSpawnPoint;
+    [SerializeField]
+    List<GameObject> SideClearBallon;
+    [SerializeField]
+    GameObject MainClearBallon;
+    [SerializeField]
+    GameObject balloonburst;
+    [SerializeField]
+    LayerMask ClearLayer;
+    [SerializeField]
+    Button HomeBtn;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
+        HomeBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("SelectStageScene");
+        });
+        HomeBtn.gameObject.SetActive(false);
+
         StartCoroutine(StartGame());
     }
 
@@ -77,6 +106,12 @@ public class AntGameScene : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             MouseUp();
+        }
+
+        if (CurGameCount > MaxGameCount && ClearChk == false)
+        {
+            ClearChk = true;
+            StartCoroutine(ClearShow());
         }
     }
 
@@ -103,6 +138,14 @@ public class AntGameScene : MonoBehaviour
     IEnumerator StartGame()
     {
         yield return null;
+        if (StartChk == false)
+        {
+            yield return null;
+            FadePanel.DOFade(0, ShowTiem / 1.2f);
+            yield return new WaitForSeconds(ShowTiem / 1.2f);
+            FadePanel.gameObject.SetActive(false);
+        }
+
         Destroy(Ants);
         Ants = null;
 
@@ -115,14 +158,29 @@ public class AntGameScene : MonoBehaviour
     #region  마우스 상호작용 함수들
     void MouseClick() // 마우스를 누르고 있는동안 ray실행
     {
-        MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, layerMask);
-        if (hit)
+        if (ClearChk == true)
         {
-            string[] SpiltName = hit.collider.name.Split('_');
-            PickNum = int.Parse(SpiltName[1]);
-            hit.collider.gameObject.transform.position = MousePos;
+            Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
+            if (hit)
+            {
+                Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
+                Destroy(hit.collider.gameObject);
+            }
+        }
+
+        else
+        {
+            MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, layerMask);
+            if (hit)
+            {
+                string[] SpiltName = hit.collider.name.Split('_');
+                PickNum = int.Parse(SpiltName[1]);
+                hit.collider.gameObject.transform.position = MousePos;
+            }
         }
     }
 
@@ -210,6 +268,25 @@ public class AntGameScene : MonoBehaviour
 
         StartChk = true;
         i = 0;
+    }
+
+    IEnumerator ClearShow()
+    {
+        yield return null;
+        FadePanel.gameObject.SetActive(true);
+
+        for (int i = 0; i < 30; i++)
+        {
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+
+            BallonSpawnPoint = new Vector3(Random.Range(-8.0f, 8.0f), -13.0f, 0f);
+            Instantiate(SideClearBallon[Random.Range(0, SideClearBallon.Count)], BallonSpawnPoint, Quaternion.identity);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(MainClearBallon, new Vector3(0, -13.0f, 0), Quaternion.identity);
+        yield return new WaitForSeconds(1.0f);
+        HomeBtn.gameObject.SetActive(true);
     }
 
     public List<T> GetShuffleList<T>(List<T> _list) // 제네릭 리스트를 이용한 리스트 랜덤 셔플 함수

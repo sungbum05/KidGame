@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bread
+  - SideBallon
+  - MainBallon
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Bread
-  - 
-  - 
+  - House
+  - Ballon
   - 
   - 
   - 

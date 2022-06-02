@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 
 public class DuckGameMgr : MonoBehaviour
 {
+    #region 게임 시작
     [SerializeField]
     private string SelectColor; // 선택된 컬러 받아올 변수
 
     bool StartChk = false;
+    [SerializeField]
+    Image FadePanel;
+    [SerializeField]
+    float ShowTiem = 1.0f;
 
     [SerializeField]
     int MaxGameCount = 5;
@@ -35,6 +41,25 @@ public class DuckGameMgr : MonoBehaviour
     [Space(10)]
     [SerializeField]
     List<GameObject> ProgressPoint;
+    #endregion
+
+    #region 게임 끝 연출
+    [Space(10)]
+    [SerializeField]
+    bool ClearChk = false;
+    [SerializeField]
+    Vector3 BallonSpawnPoint;
+    [SerializeField]
+    List<GameObject> SideClearBallon;
+    [SerializeField]
+    GameObject MainClearBallon;
+    [SerializeField]
+    GameObject balloonburst;
+    [SerializeField]
+    LayerMask ClearLayer;
+    [SerializeField]
+    Button HomeBtn;
+    #endregion
 
     private void Awake()
     {
@@ -44,6 +69,12 @@ public class DuckGameMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HomeBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("SelectStageScene");
+        });
+        HomeBtn.gameObject.SetActive(false);
+
         StartCoroutine(StartGame());
 
         foreach (Button Btn in BabyDuckBtns)
@@ -63,6 +94,34 @@ public class DuckGameMgr : MonoBehaviour
     void Update()
     {
         ProgressSetting();
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Down");
+            MouseClick();
+        }
+
+        if(CurGameCount > MaxGameCount && StartChk == true)
+        {
+            StartChk = false;
+            ClearChk = true;
+            StartCoroutine(ClearShow());
+        }
+    }
+
+    void MouseClick() // 마우스를 누르고 있는동안 ray실행
+    {
+        if (ClearChk == true)
+        {
+            Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
+            if (hit)
+            {
+                Instantiate(balloonburst, new Vector2 (hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
+                Destroy(hit.collider.gameObject);
+            }
+        }
     }
 
     void ProgressSetting()
@@ -95,12 +154,29 @@ public class DuckGameMgr : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
         }
 
-        StartChk = true;
-        GetShuffleList<string>(g_Color);
-        SettingBabyDuck();
-        SettingColorChatBox();
+        if (StartChk == false)
+        {
+            FadePanel.DOFade(0, ShowTiem / 1.2f);
 
-        CurGameCount+=1;
+            StartChk = true;
+
+            GetShuffleList<string>(g_Color);
+            SettingBabyDuck();
+            SettingColorChatBox();
+            yield return new WaitForSeconds(ShowTiem / 1.2f);
+            FadePanel.gameObject.SetActive(false);
+        }
+
+        else
+        {
+            StartChk = true;
+
+            GetShuffleList<string>(g_Color);
+            SettingBabyDuck();
+            SettingColorChatBox();
+        }
+
+        CurGameCount += 1;
     }
 
     IEnumerator ExitDuck()
@@ -157,6 +233,25 @@ public class DuckGameMgr : MonoBehaviour
 
         ChatBox.sprite = ColorChatBoxkDic[SelectColor];
     } // 챗박스 색깔 변경
+
+    IEnumerator ClearShow()
+    {
+        yield return null;
+        FadePanel.gameObject.SetActive(true);
+
+        for (int i = 0; i < 30; i++)
+        {
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+
+            BallonSpawnPoint = new Vector3(Random.Range(-8.0f, 8.0f), -13.0f, 0f);
+            Instantiate(SideClearBallon[Random.Range(0, SideClearBallon.Count)], BallonSpawnPoint, Quaternion.identity);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(MainClearBallon, new Vector3(0, -13.0f, 0), Quaternion.identity);
+        yield return new WaitForSeconds(1.0f);
+        HomeBtn.gameObject.SetActive(true);
+    }
 
     public List<T> GetShuffleList<T>(List<T> _list) // 제네릭 리스트를 이용한 리스트 랜덤 셔플 함수
     {
