@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class AntGameScene : MonoBehaviour
@@ -12,9 +13,9 @@ public class AntGameScene : MonoBehaviour
     [SerializeField]
     bool StartChk = false;
     [SerializeField]
-    int MaxCount = 5;
+    int MaxGameCount = 5;
     [SerializeField]
-    int CurCount = 0;
+    int CurGameCount = 0;
 
     [Space(10)]
     [SerializeField]
@@ -53,6 +54,10 @@ public class AntGameScene : MonoBehaviour
     [SerializeField]
     Sprite AntChangeImg;
 
+    [Space(10)]
+    [SerializeField]
+    List<GameObject> ProgressPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +67,9 @@ public class AntGameScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        ProgressSetting();
+
+        if (Input.GetMouseButton(0))
         {
             MouseClick();
         }
@@ -70,6 +77,26 @@ public class AntGameScene : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             MouseUp();
+        }
+    }
+
+    void ProgressSetting()
+    {
+        if (CurGameCount > 0)
+        {
+            int i = 0;
+
+            foreach (GameObject obj in ProgressPoint)
+            {
+                if(i <= CurGameCount - 1)
+                {
+                    obj.GetComponent<Image>().color = Color.white;
+                }
+
+                i++;
+            }
+
+            i = 0;
         }
     }
 
@@ -82,7 +109,7 @@ public class AntGameScene : MonoBehaviour
         StartCoroutine(EnterAnt());
         StartCoroutine(BreadPosChange());
 
-        CurCount++;
+        CurGameCount++;
     }
 
     #region  마우스 상호작용 함수들

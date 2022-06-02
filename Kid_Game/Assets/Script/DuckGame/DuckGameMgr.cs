@@ -18,7 +18,7 @@ public class DuckGameMgr : MonoBehaviour
     int CurGameCount = 0;
 
     [SerializeField]
-    private List<string> Color; // 컬러 챗박스에 색깔을 배정할 컬러
+    private List<string> g_Color; // 컬러 챗박스에 색깔을 배정할 컬러
 
     [SerializeField]
     private SpriteRenderer ChatBox; // 오리들에게 색깔을 배정할 컬러
@@ -31,6 +31,10 @@ public class DuckGameMgr : MonoBehaviour
 
     [SerializeField]
     private List<Button> BabyDuckBtns; // 애기 오리들 상호 작용 버튼
+
+    [Space(10)]
+    [SerializeField]
+    List<GameObject> ProgressPoint;
 
     private void Awake()
     {
@@ -58,7 +62,27 @@ public class DuckGameMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ProgressSetting();
+    }
+
+    void ProgressSetting()
+    {
+        if (CurGameCount > 0)
+        {
+            int i = 0;
+
+            foreach (GameObject obj in ProgressPoint)
+            {
+                if (i <= CurGameCount - 1)
+                {
+                    obj.GetComponent<Image>().color = Color.white;
+                }
+
+                i++;
+            }
+
+            i = 0;
+        }
     }
 
     IEnumerator StartGame()
@@ -72,7 +96,7 @@ public class DuckGameMgr : MonoBehaviour
         }
 
         StartChk = true;
-        GetShuffleList<string>(Color);
+        GetShuffleList<string>(g_Color);
         SettingBabyDuck();
         SettingColorChatBox();
 
@@ -118,7 +142,7 @@ public class DuckGameMgr : MonoBehaviour
 
         foreach(Button Btn in BabyDuckBtns)
         {
-            Btn.GetComponent<BabyDuckInfo>().BabyColor = Color[i];
+            Btn.GetComponent<BabyDuckInfo>().BabyColor = g_Color[i];
             Btn.GetComponent<BabyDuckInfo>().ColorSetting();
             i++;
         }
@@ -129,7 +153,7 @@ public class DuckGameMgr : MonoBehaviour
     private void SettingColorChatBox()
     {
         int SelectColorIdx = Random.Range(0, 3);
-        SelectColor = Color[SelectColorIdx];
+        SelectColor = g_Color[SelectColorIdx];
 
         ChatBox.sprite = ColorChatBoxkDic[SelectColor];
     } // 챗박스 색깔 변경
