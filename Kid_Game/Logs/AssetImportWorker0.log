@@ -1,123 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.23f1 (c5d91304a876) revision 12966163'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19043.1645; Version 2009; 64bit' Language: 'ko' Physical Memory: 16316 MB
+OS: 'Windows 10 Home; OS build 19043.1706; Version 2009; 64bit' Language: 'ko' Physical Memory: 15776 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-F:\2020.3.23f1\Editor\Unity.exe
+C:\Users\user\Documents\Unity\2020.3.23f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-F:/포폴폴더/Fork/KidGame/Kid_Game
+C:/Users/user/Documents/Fork/KidGame/Kid_Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57528
-Successfully changed project path to: F:/포폴폴더/Fork/KidGame/Kid_Game
-F:/포폴폴더/Fork/KidGame/Kid_Game
+50319
+Successfully changed project path to: C:/Users/user/Documents/Fork/KidGame/Kid_Game
+C:/Users/user/Documents/Fork/KidGame/Kid_Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 50.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 37.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.23f1 (c5d91304a876)
-[Subsystems] Discovering subsystems at path F:/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path F:/포폴폴더/Fork/KidGame/Kid_Game/Assets
+[Subsystems] Discovering subsystems at path C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/user/Documents/Fork/KidGame/Kid_Game/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Renderer: AMD Radeon RX 6800M (ID=0x73df)
     Vendor:   
-    VRAM:     5991 MB
-    Driver:   27.21.14.5671
+    VRAM:     11987 MB
+    Driver:   27.20.22001.24003
 Initialize mono
-Mono path[0] = 'F:/2020.3.23f1/Editor/Data/Managed'
-Mono path[1] = 'F:/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'F:/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56388
+Mono path[0] = 'C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: F:/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.036675 seconds.
+Register platform support module: C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001626 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 38.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.976 seconds
+- Completed reload, in  0.446 seconds
 Domain Reload Profiling:
-	ReloadAssembly (976ms)
-		BeginReloadAssembly (99ms)
+	ReloadAssembly (447ms)
+		BeginReloadAssembly (42ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (590ms)
-			LoadAssemblies (102ms)
+		EndReloadAssembly (348ms)
+			LoadAssemblies (40ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (159ms)
+			SetupTypeCache (103ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (174ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (141ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (49ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (75ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
+				RefreshPlugins (39ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (64ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008000 seconds.
+Registered in 0.004461 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 42.70 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 35.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.194 seconds
+- Completed reload, in  0.840 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1196ms)
-		BeginReloadAssembly (185ms)
+	ReloadAssembly (841ms)
+		BeginReloadAssembly (106ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (939ms)
-			LoadAssemblies (147ms)
+		EndReloadAssembly (687ms)
+			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (299ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (362ms)
+			SetupTypeCache (211ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (275ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (43ms)
-				BeforeProcessingInitializeOnLoad (98ms)
-				ProcessInitializeOnLoadAttributes (187ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (13ms)
+				RefreshPlugins (36ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (152ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2212 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.2 MB.
 System memory in use after: 99.3 MB.
 
 Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2652.
-Total: 2.960900 ms (FindLiveObjects: 0.272400 ms CreateObjectMapping: 0.107400 ms MarkObjects: 2.506900 ms  DeleteObjects: 0.073200 ms)
+Total: 2.729100 ms (FindLiveObjects: 0.217100 ms CreateObjectMapping: 0.065800 ms MarkObjects: 2.383700 ms  DeleteObjects: 0.061100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,81 +131,81 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/GameScene/DuckGameScene.unity
-  artifactKey: Guid(cc23ee107d5ef3e4cbe66f10092eb33d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameScene/DuckGameScene.unity using Guid(cc23ee107d5ef3e4cbe66f10092eb33d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef15c43786d6c523d480d2eba7a2754') in 0.031160 seconds 
-  Import took 0.034504 seconds .
+  path: Assets/Scenes/GameScene/SquirrelGameScene.unity
+  artifactKey: Guid(ffd367e90a0bfb940ae1aa135187f142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene/SquirrelGameScene.unity using Guid(ffd367e90a0bfb940ae1aa135187f142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd6f2409fbc7352f30d55d95915200ce') in 0.014710 seconds 
+  Import took 0.017733 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.386554 seconds.
-  path: Assets/Scenes/GameScene/AntGameScene.unity
-  artifactKey: Guid(217707d47aad1e4489a0a8cb506e34d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameScene/AntGameScene.unity using Guid(217707d47aad1e4489a0a8cb506e34d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f940875cd35078ac2947cab1ac2961') in 0.024359 seconds 
-  Import took 0.027858 seconds .
+  Time since last request: 61.082174 seconds.
+  path: Assets/Resources/DOTweenSettings.asset
+  artifactKey: Guid(1db8c8c8c1390e949aebc0a072e67c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/DOTweenSettings.asset using Guid(1db8c8c8c1390e949aebc0a072e67c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20b86600e61f73f479924a58610267ae') in 0.052808 seconds 
+  Import took 0.056107 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.536919 seconds.
-  path: Assets/Scenes/GameScene/TitleScene.unity
-  artifactKey: Guid(1021e8ce16298e949b0cb22c60548d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameScene/TitleScene.unity using Guid(1021e8ce16298e949b0cb22c60548d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ab342fbacb1816c43e6de0662898862') in 0.013432 seconds 
-  Import took 0.016738 seconds .
+  Time since last request: 212.627525 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐
+  artifactKey: Guid(fcef94c0b8942ca49a4793d1b7df5a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐 using Guid(fcef94c0b8942ca49a4793d1b7df5a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5b179925e39e5ad59ceff0e0e86aa5a') in 0.012978 seconds 
+  Import took 0.016448 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.072470 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.236 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1237ms)
-		BeginReloadAssembly (159ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (1007ms)
-			LoadAssemblies (145ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (286ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (459ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (99ms)
-				ProcessInitializeOnLoadAttributes (204ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (134ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.6 MB.
-System memory in use after: 98.7 MB.
+Received Import Request.
+  Time since last request: 1.295656 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐
+  artifactKey: Guid(e2e32f6edb5de94458fb17db7f2c6e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐 using Guid(e2e32f6edb5de94458fb17db7f2c6e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b3b793c716638110a9c02c872c14fb9') in 0.002446 seconds 
+  Import took 0.005969 seconds .
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2654.
-Total: 2.939200 ms (FindLiveObjects: 0.221100 ms CreateObjectMapping: 0.087700 ms MarkObjects: 2.614500 ms  DeleteObjects: 0.015300 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.080156 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/3스테이지 기본적인 배치 및 느낌입니다..PNG
+  artifactKey: Guid(824f728efcee5a643afc7dc19aec496d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/3스테이지 기본적인 배치 및 느낌입니다..PNG using Guid(824f728efcee5a643afc7dc19aec496d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7e3690d6b03a8b529ecd90542cfbe9') in 0.117805 seconds 
+  Import took 0.121244 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/stage_3_background.png
+  artifactKey: Guid(5c82330cea09d4b4fbf0681d55f3d749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/stage_3_background.png using Guid(5c82330cea09d4b4fbf0681d55f3d749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63939bcfb7b83ae5e15491ba486e6c3') in 0.018981 seconds 
+  Import took 0.021872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/dice_toy.png
+  artifactKey: Guid(65baa793523b8664aa5c27aa7abd3385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/dice_toy.png using Guid(65baa793523b8664aa5c27aa7abd3385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e990c4ba271daade72d22184394b1eb') in 0.012375 seconds 
+  Import took 0.015057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/dolphin_doll_toy.png
+  artifactKey: Guid(d854527a0e76f9c4ea40863a3a4472d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/dolphin_doll_toy.png using Guid(d854527a0e76f9c4ea40863a3a4472d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2481e888f203eec0265e5ac2a6b32f3e') in 0.012143 seconds 
+  Import took 0.015190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/squirrel.png
+  artifactKey: Guid(9c431d2e1ae57ad4a856f5675ed34675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/squirrel.png using Guid(9c431d2e1ae57ad4a856f5675ed34675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47e8d302b4f835dcb937d1cc48675f34') in 0.014189 seconds 
+  Import took 0.017173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/ball_toy.png
+  artifactKey: Guid(14031c19a97d9484fbe53fda9e57e725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지(그림자맞추기)_다람쥐/ball_toy.png using Guid(14031c19a97d9484fbe53fda9e57e725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878d2d9e981e68584d9cd7823b639611') in 0.012985 seconds 
+  Import took 0.015856 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

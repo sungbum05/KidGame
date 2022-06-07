@@ -199,6 +199,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
+  SceneMoveSpeed: 9
 --- !u!4 &548540570
 Transform:
   m_ObjectHideFlags: 0

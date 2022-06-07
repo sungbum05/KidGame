@@ -32,6 +32,10 @@ public class SelectStageMgr : MonoBehaviour
     [SerializeField]
     LayerMask layerMask;
 
+    [Space(10)]
+    [SerializeField]
+    float SceneMoveSpeed = 0;
+
     private void Start()
     {
         StartCoroutine(FadeIn());
@@ -110,7 +114,7 @@ public class SelectStageMgr : MonoBehaviour
 
     void CameraMove()
     {
-        MainCamera.transform.position = Vector2.Lerp(MainCamera.transform.position, MainCamera.transform.position + (StartMousePos - CurMousePos), 20 * Time.deltaTime);
+        MainCamera.transform.position = Vector2.Lerp(MainCamera.transform.position, MainCamera.transform.position + (StartMousePos - CurMousePos), SceneMoveSpeed * Time.deltaTime);
 
         float x = Mathf.Clamp(Camera.main.transform.position.x, -CameraBorder.bounds.extents.x / 1.8f, CameraBorder.bounds.extents.x / 1.8f);
         float y = Mathf.Clamp(Camera.main.transform.position.y, -CameraBorder.bounds.extents.y / 1.8f, CameraBorder.bounds.extents.y / 1.8f);
