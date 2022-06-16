@@ -5,22 +5,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class AntGameScene : MonoBehaviour
+public class AntGameScene : Mgr
 {
+    [Header("AntScene_Mgr_attribute")]
     [SerializeField]
     int SelectNum;
     [SerializeField]
     int PickNum;
-    [SerializeField]
-    bool StartChk = false;
-    [SerializeField]
-    int MaxGameCount = 5;
-    [SerializeField]
-    int CurGameCount = 0;
-    [SerializeField]
-    Image FadePanel;
-    [SerializeField]
-    float ShowTiem = 1.0f;
 
     [Space(10)]
     [SerializeField]
@@ -59,14 +50,8 @@ public class AntGameScene : MonoBehaviour
     [SerializeField]
     Sprite AntChangeImg;
 
-    [Space(10)]
-    [SerializeField]
-    List<GameObject> ProgressPoint;
-
     #region 게임 끝 연출
     [Space(10)]
-    [SerializeField]
-    bool ClearChk = false;
     [SerializeField]
     Vector3 BallonSpawnPoint;
     [SerializeField]
@@ -115,24 +100,9 @@ public class AntGameScene : MonoBehaviour
         }
     }
 
-    void ProgressSetting()
+    protected override void ProgressSetting()
     {
-        if (CurGameCount > 0)
-        {
-            int i = 0;
-
-            foreach (GameObject obj in ProgressPoint)
-            {
-                if(i <= CurGameCount - 1)
-                {
-                    obj.GetComponent<Image>().color = Color.white;
-                }
-
-                i++;
-            }
-
-            i = 0;
-        }
+        base.ProgressSetting();
     }
 
     IEnumerator StartGame()
@@ -289,17 +259,5 @@ public class AntGameScene : MonoBehaviour
         HomeBtn.gameObject.SetActive(true);
     }
 
-    public List<T> GetShuffleList<T>(List<T> _list) // 제네릭 리스트를 이용한 리스트 랜덤 셔플 함수
-    {
-        for (int i = _list.Count - 1; i > 0; i--)
-        {
-            int rnd = Random.Range(0, i + 1); // 1 추가 해서 첫번 째 오브젝트도 첫번째로 나올 수 있도록 수정함
-
-            T temp = _list[i];
-            _list[i] = _list[rnd];
-            _list[rnd] = temp;
-        }
-
-        return _list;
-    }//(출처 : https://drehzr.tistory.com/802)
+   
 }

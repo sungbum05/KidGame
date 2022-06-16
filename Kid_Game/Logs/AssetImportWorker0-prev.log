@@ -15,11 +15,11 @@ C:/Users/user/Documents/Fork/KidGame/Kid_Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50733
+49678
 Successfully changed project path to: C:/Users/user/Documents/Fork/KidGame/Kid_Game
 C:/Users/user/Documents/Fork/KidGame/Kid_Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 34.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 40.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.23f1 (c5d91304a876)
 [Subsystems] Discovering subsystems at path C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -35,73 +35,73 @@ Initialize mono
 Mono path[0] = 'C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/user/Documents/Unity/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001487 seconds.
+Registered in 0.001652 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 33.84 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 39.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.412 seconds
+- Completed reload, in  0.465 seconds
 Domain Reload Profiling:
-	ReloadAssembly (412ms)
-		BeginReloadAssembly (39ms)
+	ReloadAssembly (465ms)
+		BeginReloadAssembly (42ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (320ms)
-			LoadAssemblies (37ms)
+		EndReloadAssembly (365ms)
+			LoadAssemblies (40ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (95ms)
+			SetupTypeCache (112ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (20ms)
-			SetupLoadedEditorAssemblies (128ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (147ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (34ms)
-				BeforeProcessingInitializeOnLoad (11ms)
-				ProcessInitializeOnLoadAttributes (60ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
+				RefreshPlugins (39ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (67ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004104 seconds.
+Registered in 0.004834 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 32.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 38.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.785 seconds
+- Completed reload, in  0.918 seconds
 Domain Reload Profiling:
-	ReloadAssembly (786ms)
-		BeginReloadAssembly (98ms)
+	ReloadAssembly (919ms)
+		BeginReloadAssembly (118ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (643ms)
-			LoadAssemblies (66ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (750ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (200ms)
+			SetupTypeCache (240ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (262ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (295ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (33ms)
-				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (142ms)
-				ProcessInitializeOnLoadMethodAttributes (12ms)
+				RefreshPlugins (39ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (163ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -109,7 +109,7 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
 Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2212 Unused Serialized files (Serialized files now loaded: 0)
@@ -117,7 +117,7 @@ System memory in use before: 99.2 MB.
 System memory in use after: 99.3 MB.
 
 Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2652.
-Total: 2.479500 ms (FindLiveObjects: 0.188300 ms CreateObjectMapping: 0.044700 ms MarkObjects: 2.187000 ms  DeleteObjects: 0.058300 ms)
+Total: 3.122700 ms (FindLiveObjects: 0.224200 ms CreateObjectMapping: 0.104500 ms MarkObjects: 2.725100 ms  DeleteObjects: 0.067500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,392 +131,21 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Image/UI
-  artifactKey: Guid(8b1d42958d435414384633e6494521ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI using Guid(8b1d42958d435414384633e6494521ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '964a2230030cbbe9ba2cd2a1f587d3c8') in 0.008354 seconds 
-  Import took 0.011208 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리
-  artifactKey: Guid(9b50f4ab65442594880e9b172e24d231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리 using Guid(9b50f4ab65442594880e9b172e24d231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4140dcd000a76b924d17ae2671841e54') in 0.005313 seconds 
-  Import took 0.008023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.949815 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지 기본적인 배치 및 느낌입니다..png
-  artifactKey: Guid(eb4235c0d9dcadf46877f9d6e071ce3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/3스테이지 기본적인 배치 및 느낌입니다..png using Guid(eb4235c0d9dcadf46877f9d6e071ce3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9049cdfe87d3d480c403dd4ae57a0a70') in 0.131588 seconds 
-  Import took 0.134607 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_put the ring_shadow.png
-  artifactKey: Guid(990ad43a786fe6b42a76cccc6cc2883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_put the ring_shadow.png using Guid(990ad43a786fe6b42a76cccc6cc2883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8901404769edfe5a2bf66855663f4a6c') in 0.016566 seconds 
-  Import took 0.019380 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_block.png
-  artifactKey: Guid(93f12e1a4efb5b144881e22352cff3b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_block.png using Guid(93f12e1a4efb5b144881e22352cff3b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad3abc8cf895bb4f6bd39777c37d424d') in 0.019784 seconds 
-  Import took 0.022621 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000171 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_block_shadow.png
-  artifactKey: Guid(dac762abfce30ed488519d66d46f8b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_block_shadow.png using Guid(dac762abfce30ed488519d66d46f8b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15829425dc37c1e21353266edddebf56') in 0.014266 seconds 
-  Import took 0.016997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel.png
-  artifactKey: Guid(3f78c7d912af4bd43ba6214ceff5fd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel.png using Guid(3f78c7d912af4bd43ba6214ceff5fd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c5c723054fe63d23c4ab77964203ddc') in 0.015212 seconds 
-  Import took 0.017698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_car.png
-  artifactKey: Guid(ffc0ea36a559ec540a6321d75cf12473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_car.png using Guid(ffc0ea36a559ec540a6321d75cf12473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f4dd31a7cc5d9fea6091e32695518dc') in 0.013536 seconds 
-  Import took 0.016275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dice.png
-  artifactKey: Guid(4921eb59832793f4d90f6a6380a06fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dice.png using Guid(4921eb59832793f4d90f6a6380a06fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188491b4092d03aa07da64f8efba4b34') in 0.013431 seconds 
-  Import took 0.016139 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/selection object.png
-  artifactKey: Guid(fe9bef7b41ce0804db7e45bedb3eed92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/selection object.png using Guid(fe9bef7b41ce0804db7e45bedb3eed92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c00aa8e4d7e98c804b3ba3cee59bc53') in 0.018491 seconds 
-  Import took 0.021391 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dolphin_shadow.png
-  artifactKey: Guid(eeea9331f2680d04d8465d23e1c130b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dolphin_shadow.png using Guid(eeea9331f2680d04d8465d23e1c130b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '020b0ee96af58b1b5347fe16ae9195d6') in 0.016376 seconds 
-  Import took 0.019191 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_car_shadow.png
-  artifactKey: Guid(2e0578425b414cc4dbf4966f228ea772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_car_shadow.png using Guid(2e0578425b414cc4dbf4966f228ea772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd2cd2f833b099e73801587e027878ac') in 0.012782 seconds 
-  Import took 0.015671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dice_shadow.png
-  artifactKey: Guid(cb14830f62549a54080aeb8298deb79a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dice_shadow.png using Guid(cb14830f62549a54080aeb8298deb79a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd536d830a965cc0847cf62735cb3d4d9') in 0.013426 seconds 
-  Import took 0.016143 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dolphin.png
-  artifactKey: Guid(0618ab8ff873f6542ae2a3c2b0c4559b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_dolphin.png using Guid(0618ab8ff873f6542ae2a3c2b0c4559b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b6c200c10608ed65dd8f419575167d') in 0.013371 seconds 
-  Import took 0.016215 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_yellow_ball.png
-  artifactKey: Guid(1bc0fee6f33189348805699379ddda4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_yellow_ball.png using Guid(1bc0fee6f33189348805699379ddda4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6977e0e405808902c02bcc43fefd3dc') in 0.015655 seconds 
-  Import took 0.018431 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_yellow_ball_shadow.png
-  artifactKey: Guid(787260608170d5b4094835a9caf2f4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_yellow_ball_shadow.png using Guid(787260608170d5b4094835a9caf2f4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd405801c875deb66f3710bbbfb8526a') in 0.014373 seconds 
-  Import took 0.017246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/stage_3_background.png
-  artifactKey: Guid(f01c00422294be14e9ba2f11df155403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/stage_3_background.png using Guid(f01c00422294be14e9ba2f11df155403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744c9a3add069e2f107f769ff8a12381') in 0.014310 seconds 
-  Import took 0.016879 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_put the ring.png
-  artifactKey: Guid(94004a4392575884e88d5127c4ada08c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/toy_put the ring.png using Guid(94004a4392575884e88d5127c4ada08c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e01baa3830e9bca43b0def1172c0e12') in 0.011490 seconds 
-  Import took 0.014424 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.014203 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation
-  artifactKey: Guid(1d8603fe293f22e4f9e80886e322546a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation using Guid(1d8603fe293f22e4f9e80886e322546a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02e2a6098d3a17de584c0263e3988567') in 0.005134 seconds 
-  Import took 0.008145 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.041210 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_00.png
-  artifactKey: Guid(70ca5a37ec33bb74ca532752c70ed5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_00.png using Guid(70ca5a37ec33bb74ca532752c70ed5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fca801751a70f85cc7a661b6a8f3a4f') in 0.014083 seconds 
-  Import took 0.017285 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_15.png
-  artifactKey: Guid(eea2e89c3b6cb2d4c81d6f51d4c84e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_15.png using Guid(eea2e89c3b6cb2d4c81d6f51d4c84e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed39023f55dbda583d8147e4ed1bc8ab') in 0.024524 seconds 
-  Import took 0.027260 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_02.png
-  artifactKey: Guid(0830fb78daf93c3449eb999638a8ac48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_02.png using Guid(0830fb78daf93c3449eb999638a8ac48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0be4799dc06a72e37e6f3246f95996e0') in 0.016294 seconds 
-  Import took 0.019014 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_03.png
-  artifactKey: Guid(d75bc4737ad23db4688742457ab4fbd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_03.png using Guid(d75bc4737ad23db4688742457ab4fbd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79348dbcf1531d64b1c6129646ef6b5e') in 0.014885 seconds 
-  Import took 0.017674 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_10.png
-  artifactKey: Guid(0a0468d339a67d046a83b299e3554302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_10.png using Guid(0a0468d339a67d046a83b299e3554302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0eff533c385a908f5ff1c27f70c3b39') in 0.015550 seconds 
-  Import took 0.018271 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000162 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_19.png
-  artifactKey: Guid(5d9263d0868dc10479a360413560d036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_19.png using Guid(5d9263d0868dc10479a360413560d036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4e9a3afd652a85df09a3aab0f848d4d') in 0.017222 seconds 
-  Import took 0.020031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_01.png
-  artifactKey: Guid(7d208c6513bc53c4d8671db155563db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_01.png using Guid(7d208c6513bc53c4d8671db155563db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3dfbe6f965d74dc812d7c7a06342f6a') in 0.015600 seconds 
-  Import took 0.018231 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_13.png
-  artifactKey: Guid(cc5e378bbb99be84e84ded5823674746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_13.png using Guid(cc5e378bbb99be84e84ded5823674746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '025840799a914723a93936c551f3a32e') in 0.015652 seconds 
-  Import took 0.018467 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_07.png
-  artifactKey: Guid(06da9694bcf706644aafe0d78e89c3be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_07.png using Guid(06da9694bcf706644aafe0d78e89c3be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5f9d5011bcac03722524bd6e7091cd') in 0.013959 seconds 
-  Import took 0.016923 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000161 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_08.png
-  artifactKey: Guid(3c4dac76addc86246a65beaff4677bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_08.png using Guid(3c4dac76addc86246a65beaff4677bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b440fe576d4aaaa6febbea7937a8125') in 0.012606 seconds 
-  Import took 0.015462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_12.png
-  artifactKey: Guid(41fcaffa957130144a11bd4afafbef1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_12.png using Guid(41fcaffa957130144a11bd4afafbef1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '731833c60c3b2b2185796a76cf18676c') in 0.012297 seconds 
-  Import took 0.015050 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_14.png
-  artifactKey: Guid(fde83ac38ebe6be45ba78341228bbfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_14.png using Guid(fde83ac38ebe6be45ba78341228bbfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1069acaf8eb73b7ca2c514d8c6007812') in 0.013071 seconds 
-  Import took 0.015957 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_09.png
-  artifactKey: Guid(3c77635c058ee934a9cc5844dd72b34f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_09.png using Guid(3c77635c058ee934a9cc5844dd72b34f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7ef9dde9700515459de42b3704f2af4') in 0.012777 seconds 
-  Import took 0.015454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_11.png
-  artifactKey: Guid(4803f354f65eb874ab2e11b0c1d4a498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_11.png using Guid(4803f354f65eb874ab2e11b0c1d4a498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40cfa56327cffcc66ad405f05b0030bf') in 0.012768 seconds 
-  Import took 0.015536 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_06.png
-  artifactKey: Guid(f95fa538bfc162845ae0768383bcc723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_06.png using Guid(f95fa538bfc162845ae0768383bcc723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae750f5988f348247b248fedb135ff1') in 0.012338 seconds 
-  Import took 0.015121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_16.png
-  artifactKey: Guid(71d3ecec9b994fe438288ddd2ad0a0a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_16.png using Guid(71d3ecec9b994fe438288ddd2ad0a0a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292f00749b53497ab93b285b087b28d2') in 0.013324 seconds 
-  Import took 0.016226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_18.png
-  artifactKey: Guid(cc8e980903853fc468c9edc8ecccc9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_18.png using Guid(cc8e980903853fc468c9edc8ecccc9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1204344204e6b771dbe33453412298b6') in 0.014141 seconds 
-  Import took 0.017218 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_05.png
-  artifactKey: Guid(bf25df67143da8b46ad4b998aac70941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_05.png using Guid(bf25df67143da8b46ad4b998aac70941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4f760aa0c7c53a9f0360d7432dac0b4') in 0.012958 seconds 
-  Import took 0.015775 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_04.png
-  artifactKey: Guid(016ba3dd1c130b341a33cf2af4d8c348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_04.png using Guid(016ba3dd1c130b341a33cf2af4d8c348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d1ad8be2d63fa844e5e4eb6dbdd59af') in 0.013307 seconds 
-  Import took 0.016021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_17.png
-  artifactKey: Guid(659bcca60c2481144862701c1cdca220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/3스테이지(그림자맞추기)_다람쥐/squirrel_animation/squirrel_17.png using Guid(659bcca60c2481144862701c1cdca220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8b5a8aa2377b89663048228b4fe88e6') in 0.012429 seconds 
-  Import took 0.015258 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.478725 seconds.
-  path: Assets/Scenes/GameScene/SelectStageScene.unity
-  artifactKey: Guid(f18297f5a428c0c428f9629d537c20c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameScene/SelectStageScene.unity using Guid(f18297f5a428c0c428f9629d537c20c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22f57c0ff6bb5a95f9be21af4f98d835') in 0.005381 seconds 
-  Import took 0.008547 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.387475 seconds.
-  path: Assets/Scenes/GameScene/SquirrelGameScene.unity
-  artifactKey: Guid(ffd367e90a0bfb940ae1aa135187f142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameScene/SquirrelGameScene.unity using Guid(ffd367e90a0bfb940ae1aa135187f142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99ec8f0424c8ed788aa706f54c9a3787') in 0.005544 seconds 
-  Import took 0.008623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 60.577290 seconds.
   path: Assets/Animation/squirrel_00.controller
   artifactKey: Guid(01ee706d0703b9649ac875b728bcfffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/squirrel_00.controller using Guid(01ee706d0703b9649ac875b728bcfffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eda0b873fdfd6578bc22e4879c9aeb5') in 0.007359 seconds 
-  Import took 0.011671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.056470 seconds.
-  path: Assets/Animation/Squirrel_Idle.anim
-  artifactKey: Guid(a70be8de5b456db43b657832e2607f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/Squirrel_Idle.anim using Guid(a70be8de5b456db43b657832e2607f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57ec135d5d7253b316e53ffdd204590e') in 0.007197 seconds 
-  Import took 0.010339 seconds .
+Start importing Assets/Animation/squirrel_00.controller using Guid(01ee706d0703b9649ac875b728bcfffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0deb57f2001df41d24fa80c3610a9830') in 0.031589 seconds 
+  Import took 0.036651 seconds .
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004479 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.733 seconds
-Domain Reload Profiling:
-	ReloadAssembly (733ms)
-		BeginReloadAssembly (104ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (585ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (197ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (228ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.7 MB.
-System memory in use after: 101.8 MB.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 55.3 MB.
+System memory in use after: 55.4 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2678.
-Total: 2.949300 ms (FindLiveObjects: 0.180200 ms CreateObjectMapping: 0.064200 ms MarkObjects: 2.683100 ms  DeleteObjects: 0.021000 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2652.
+Total: 3.338400 ms (FindLiveObjects: 0.186600 ms CreateObjectMapping: 0.046400 ms MarkObjects: 3.091100 ms  DeleteObjects: 0.013700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -531,1024 +160,48 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003867 seconds.
+Registered in 0.004618 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.728 seconds
+- Completed reload, in  0.742 seconds
 Domain Reload Profiling:
-	ReloadAssembly (729ms)
-		BeginReloadAssembly (98ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (586ms)
-			LoadAssemblies (64ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (197ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (229ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (148ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.7 MB.
-System memory in use after: 101.9 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2680.
-Total: 2.919700 ms (FindLiveObjects: 0.226300 ms CreateObjectMapping: 0.083000 ms MarkObjects: 2.588900 ms  DeleteObjects: 0.020500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003938 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.713 seconds
-Domain Reload Profiling:
-	ReloadAssembly (713ms)
-		BeginReloadAssembly (85ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (584ms)
-			LoadAssemblies (64ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (198ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (225ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (144ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 101.9 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2682.
-Total: 2.706500 ms (FindLiveObjects: 0.199400 ms CreateObjectMapping: 0.053500 ms MarkObjects: 2.426200 ms  DeleteObjects: 0.026500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 54.661884 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/mommy_duck.png
-  artifactKey: Guid(21bce02ed1500d945be70a065069e1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/mommy_duck.png using Guid(21bce02ed1500d945be70a065069e1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75f36e9dac62ce955f7a425e3303515b') in 0.042270 seconds 
-  Import took 0.045583 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/stage_2_background.png
-  artifactKey: Guid(e922c5f70d1cc604eb15c20f6521ab90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/stage_2_background.png using Guid(e922c5f70d1cc604eb15c20f6521ab90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f263f7d745a90b7d7832a68316ae6a04') in 0.013693 seconds 
-  Import took 0.016521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Image/타이틀화면/타이틀화면/start_button.png
-  artifactKey: Guid(a1266638e0fbb4348bd0f16a6f2938f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/타이틀화면/타이틀화면/start_button.png using Guid(a1266638e0fbb4348bd0f16a6f2938f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a16cc38fa87eb1c2b29136cf72582d9') in 0.018608 seconds 
-  Import took 0.021427 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_blue.png
-  artifactKey: Guid(ae51df1f61d0e1243b94b1a128c74804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_blue.png using Guid(ae51df1f61d0e1243b94b1a128c74804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92cbcd413bd5726b57484606c46e4f4d') in 0.015464 seconds 
-  Import took 0.018464 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000162 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_green.png
-  artifactKey: Guid(684e1d10b61a49e48b8db914af525031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_green.png using Guid(684e1d10b61a49e48b8db914af525031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408aa02810e06e0ebe844b88f14bc719') in 0.015884 seconds 
-  Import took 0.018913 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/stage_1_background.png
-  artifactKey: Guid(77cb8b8206c73eb43931714b365e5d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/stage_1_background.png using Guid(77cb8b8206c73eb43931714b365e5d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d4ae398d26469942636d73ba3f3b13e') in 0.016601 seconds 
-  Import took 0.019471 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/stage_select_outline.png
-  artifactKey: Guid(51d6188f4c62f304ba9c7e147e5adeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/stage_select_outline.png using Guid(51d6188f4c62f304ba9c7e147e5adeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9f13413680b243c1c9eb70b59d692b3') in 0.020898 seconds 
-  Import took 0.023738 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Image/타이틀화면/타이틀화면/title_backgroind.png
-  artifactKey: Guid(9e6fc0f63488d774891cdb0c1b7c3ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/타이틀화면/타이틀화면/title_backgroind.png using Guid(9e6fc0f63488d774891cdb0c1b7c3ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f099ce245aa5a180578fe7a0f40740d') in 0.020824 seconds 
-  Import took 0.023504 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_orange.png
-  artifactKey: Guid(9c82f7198289d064c9e629904e92de69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_orange.png using Guid(9c82f7198289d064c9e629904e92de69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a9d9b5569246280e1003bbf24ed318') in 0.012365 seconds 
-  Import took 0.015114 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_red.png
-  artifactKey: Guid(47d72e0062dec524db374a2e11f5a62d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_red.png using Guid(47d72e0062dec524db374a2e11f5a62d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88a64cb3687f77514e6707fbd56ac04') in 0.014603 seconds 
-  Import took 0.017634 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/rabbit_house_line.png
-  artifactKey: Guid(e27c867aa93267e43a977d7bbbeed28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/rabbit_house_line.png using Guid(e27c867aa93267e43a977d7bbbeed28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85882d98bab59be72ac9ede5e0851497') in 0.020709 seconds 
-  Import took 0.023855 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Image/타이틀화면/타이틀화면/title.png
-  artifactKey: Guid(dd61b44140e26b344b09ecc106f77b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/타이틀화면/타이틀화면/title.png using Guid(dd61b44140e26b344b09ecc106f77b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8007b7be6e2fb0b2fc42d54a143d787e') in 0.022036 seconds 
-  Import took 0.025152 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000147 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/squirrel_tent_line.png
-  artifactKey: Guid(65b7205b7739d5747855903b928ba081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/squirrel_tent_line.png using Guid(65b7205b7739d5747855903b928ba081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34c1f5194a81d9f736e22fa1b2f516e') in 0.020616 seconds 
-  Import took 0.023600 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/stage_select_all_background.png
-  artifactKey: Guid(4129fc7fa352c7049a2150555d9daa30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/stage_select_all_background.png using Guid(4129fc7fa352c7049a2150555d9daa30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20db2ae309b425b4fe6b437317a0ba27') in 0.018067 seconds 
-  Import took 0.021245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_purple.png
-  artifactKey: Guid(520371b818ff4884fbde4d5d69711042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_purple.png using Guid(520371b818ff4884fbde4d5d69711042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53a11bb07f0489d7ce3ee3b02a3b59ea') in 0.014882 seconds 
-  Import took 0.017961 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_yellow.png
-  artifactKey: Guid(aa4dedfd27616a245af9f8060a50b35a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_yellow.png using Guid(aa4dedfd27616a245af9f8060a50b35a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81c3ddbabdf5ccee6fe0bd7d4030d544') in 0.014890 seconds 
-  Import took 0.017795 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_white.png
-  artifactKey: Guid(09ee503143f85424aa404507f2b09513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_white.png using Guid(09ee503143f85424aa404507f2b09513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63a2646c4e68da063596aa48328e674') in 0.012890 seconds 
-  Import took 0.015886 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/squirrel_tent_no_line.png
-  artifactKey: Guid(13f8ebb2d3e36624197d466903ff1ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/squirrel_tent_no_line.png using Guid(13f8ebb2d3e36624197d466903ff1ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d282f97c509668204083fb4b0cc3b3') in 0.019889 seconds 
-  Import took 0.022871 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000162 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/rabbit_house_no_line.png
-  artifactKey: Guid(e55b85d08045aa547bea901201dc651b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/rabbit_house_no_line.png using Guid(e55b85d08045aa547bea901201dc651b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14accfc83e1191ad518b28759354f27') in 0.017519 seconds 
-  Import took 0.020604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Image/UI/UI/set_UI.png
-  artifactKey: Guid(0813457db89e20a458632007cf56caa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/set_UI.png using Guid(0813457db89e20a458632007cf56caa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2434a1f5186d9a450f0cd5eae942ce97') in 0.018127 seconds 
-  Import took 0.020851 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/유아용게임_선택화면 배경.psd
-  artifactKey: Guid(d027b29e0ff51984d87303d0c9cc006c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/유아용게임_선택화면 배경.psd using Guid(d027b29e0ff51984d87303d0c9cc006c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '084174c944a6f68cfadf0bf4ec38e7c4') in 0.018926 seconds 
-  Import took 0.022032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_black.png
-  artifactKey: Guid(14750169f83df7447abf8e4210d21386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/speech bubble_black.png using Guid(14750169f83df7447abf8e4210d21386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb7060f6b35eca69b66f6638022ed18a') in 0.012995 seconds 
-  Import took 0.015922 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004011 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.712 seconds
-Domain Reload Profiling:
-	ReloadAssembly (712ms)
-		BeginReloadAssembly (90ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (578ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (191ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (225ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (144ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 101.9 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2699.
-Total: 2.447500 ms (FindLiveObjects: 0.188500 ms CreateObjectMapping: 0.050800 ms MarkObjects: 2.192400 ms  DeleteObjects: 0.014500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003854 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.730 seconds
-Domain Reload Profiling:
-	ReloadAssembly (730ms)
-		BeginReloadAssembly (92ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (590ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (193ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (235ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (149ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 101.9 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2701.
-Total: 2.646500 ms (FindLiveObjects: 0.188400 ms CreateObjectMapping: 0.047600 ms MarkObjects: 2.393100 ms  DeleteObjects: 0.016600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003945 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.716 seconds
-Domain Reload Profiling:
-	ReloadAssembly (717ms)
-		BeginReloadAssembly (97ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (576ms)
-			LoadAssemblies (66ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (192ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (222ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (141ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.0 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2703.
-Total: 2.718400 ms (FindLiveObjects: 0.184100 ms CreateObjectMapping: 0.052600 ms MarkObjects: 2.465800 ms  DeleteObjects: 0.015200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003747 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.721 seconds
-Domain Reload Profiling:
-	ReloadAssembly (722ms)
+	ReloadAssembly (742ms)
 		BeginReloadAssembly (91ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (583ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (604ms)
 			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (193ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (224ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (144ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.0 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2705.
-Total: 2.591100 ms (FindLiveObjects: 0.179100 ms CreateObjectMapping: 0.045700 ms MarkObjects: 2.349200 ms  DeleteObjects: 0.016300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 373.197305 seconds.
-  path: Assets/Image/UI-20220614T010220Z-001
-  artifactKey: Guid(cae41fcd017d4e844b0d163c89e256c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI-20220614T010220Z-001 using Guid(cae41fcd017d4e844b0d163c89e256c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f4971edf060a4b0334a31bde4c5f223') in 0.008500 seconds 
-  Import took 0.011792 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.071465 seconds.
-  path: Assets/Image/UI
-  artifactKey: Guid(cae41fcd017d4e844b0d163c89e256c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI using Guid(cae41fcd017d4e844b0d163c89e256c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4654d5018feb3780aa992d42f434f142') in 0.002081 seconds 
-  Import took 0.004924 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.647288 seconds.
-  path: Assets/Image/UI/UI
-  artifactKey: Guid(8f4b935d0d77cdb41926cc2b8907ff1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI using Guid(8f4b935d0d77cdb41926cc2b8907ff1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1410f26a36b64089c060d6d9fb8b639') in 0.002014 seconds 
-  Import took 0.005226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.975602 seconds.
-  path: Assets/Image/UI/UI/UI_back_basic.png
-  artifactKey: Guid(453113e11a181654e920e3d6f5eb8e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_back_basic.png using Guid(453113e11a181654e920e3d6f5eb8e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aea68ab9bce99b68a39cdac0921b138') in 0.037883 seconds 
-  Import took 0.041363 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Image/UI/UI/UI_back_mouse_click.png
-  artifactKey: Guid(38a6641f08ea4d646b979774f5a21f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_back_mouse_click.png using Guid(38a6641f08ea4d646b979774f5a21f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a66c3170822fe571935fc48e0e6379') in 0.014205 seconds 
-  Import took 0.017225 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Image/UI/UI/UI_back_mouse_over.png
-  artifactKey: Guid(08ed8652e0e5e204c82736c97dc6d4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_back_mouse_over.png using Guid(08ed8652e0e5e204c82736c97dc6d4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfbba885e04ebe7b75fc8aff728fdcbb') in 0.014627 seconds 
-  Import took 0.017650 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/Image/UI/UI/UI_option_mouse_over.png
-  artifactKey: Guid(dc3206b931512bb4bb4d15b6e060c284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_option_mouse_over.png using Guid(dc3206b931512bb4bb4d15b6e060c284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284925459bd9094edf6edcc41d342650') in 0.014341 seconds 
-  Import took 0.017265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Image/UI/UI/UI_cancel_basic.png
-  artifactKey: Guid(cd3ed591a3aafa24dbc1367fa39fab59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_cancel_basic.png using Guid(cd3ed591a3aafa24dbc1367fa39fab59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca9f23dd23ecd842ca3007abe3f5062') in 0.012503 seconds 
-  Import took 0.015352 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/Image/UI/UI/UI_exit_bar.png
-  artifactKey: Guid(050179aedaad6ef4fa9c2504d3b90575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_exit_bar.png using Guid(050179aedaad6ef4fa9c2504d3b90575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d399d5062611e772a4d3f191a5351e5') in 0.014237 seconds 
-  Import took 0.016971 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Image/UI/UI/UI_cancel_mouse_over.png
-  artifactKey: Guid(bc9a7515b788ef040be900aa6ca1e921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_cancel_mouse_over.png using Guid(bc9a7515b788ef040be900aa6ca1e921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f43d4fdebc92da587b3679769d9a9b') in 0.014004 seconds 
-  Import took 0.016938 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Image/UI/UI/UI_exit_mouse_over.png
-  artifactKey: Guid(163a4f83321615b4fa42ca14bea3c229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_exit_mouse_over.png using Guid(163a4f83321615b4fa42ca14bea3c229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3dec31549bdd0dcef2e0954b1b237ff') in 0.014400 seconds 
-  Import took 0.017056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Image/UI/UI/UI_cancel_mouse_click.png
-  artifactKey: Guid(8e549adf46042fb41bb540d48853e71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_cancel_mouse_click.png using Guid(8e549adf46042fb41bb540d48853e71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a6402b83a89d0fe002ee85d375a65e1') in 0.012559 seconds 
-  Import took 0.015482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Image/UI/UI/UI_home_mouse_over.png
-  artifactKey: Guid(378bfa436ca35e046ae73d6c42db5bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_home_mouse_over.png using Guid(378bfa436ca35e046ae73d6c42db5bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0dd3e2e6f9529ba48fc0b8d5baf3663') in 0.012231 seconds 
-  Import took 0.014980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Image/UI/UI/UI_exit_basic.png
-  artifactKey: Guid(56f5a357744181d4cbc4c48dcd7aab9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_exit_basic.png using Guid(56f5a357744181d4cbc4c48dcd7aab9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '625f8cbf0d3adb2476f971df15ee43c1') in 0.017675 seconds 
-  Import took 0.020515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Image/UI/UI/이런식으로 해주세요!.png
-  artifactKey: Guid(32a13e1116db86d4aa9305e1f658f2b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/이런식으로 해주세요!.png using Guid(32a13e1116db86d4aa9305e1f658f2b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0670f6cb2cdbf66097740120d461ce') in 0.013525 seconds 
-  Import took 0.016404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Image/UI/UI/UI_option_basic.png
-  artifactKey: Guid(500e3fd0e4cb69f44963380cec14d355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_option_basic.png using Guid(500e3fd0e4cb69f44963380cec14d355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d03ca8d71f702fdcf5ac499cacb20f3') in 0.012455 seconds 
-  Import took 0.015262 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/Image/UI/UI/UI_exit_mouse_click.png
-  artifactKey: Guid(671c75f2afce96547b2f870be551f289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_exit_mouse_click.png using Guid(671c75f2afce96547b2f870be551f289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961e97e0fb74e431b365fd88587a63a1') in 0.014474 seconds 
-  Import took 0.017361 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/Image/UI/UI/UI_restart_mouse_over.png
-  artifactKey: Guid(0498a0f1f98ec9a4f886bed1f37cdae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_restart_mouse_over.png using Guid(0498a0f1f98ec9a4f886bed1f37cdae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5133e023190e1e5ea49966eefa3edf11') in 0.012019 seconds 
-  Import took 0.015034 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Image/UI/UI/UI_credit_mouse_over.png
-  artifactKey: Guid(b5fa94d112ce86146862564f70e4a1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_credit_mouse_over.png using Guid(b5fa94d112ce86146862564f70e4a1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72cb3f4d88930d0be06885397e923002') in 0.011939 seconds 
-  Import took 0.014664 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/Image/UI/UI/UI_home_mouse_click.png
-  artifactKey: Guid(b403dd1b66a4ff443bbcfe3458a47f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_home_mouse_click.png using Guid(b403dd1b66a4ff443bbcfe3458a47f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e09778bd5fcf2d2077a063e877a34dd') in 0.012319 seconds 
-  Import took 0.015183 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Image/UI/UI/UI_home_basic.png
-  artifactKey: Guid(7c0e9b67cfb3f4a40865f41ba7608e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_home_basic.png using Guid(7c0e9b67cfb3f4a40865f41ba7608e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e769d179f5e871455511dc2e8a59cb') in 0.012194 seconds 
-  Import took 0.014969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Image/UI/UI/UI_restart_mouse_click.png
-  artifactKey: Guid(a0cd1b52bb711b545997287d8d386fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_restart_mouse_click.png using Guid(a0cd1b52bb711b545997287d8d386fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76e84832beb9156c4894b1e1919003a9') in 0.013427 seconds 
-  Import took 0.016430 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Image/UI/UI/UI_credit_mouse_click.png
-  artifactKey: Guid(a98ad78ef5eb1924f9f31d56b420c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_credit_mouse_click.png using Guid(a98ad78ef5eb1924f9f31d56b420c825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acfba8a36d58b8a708aff55bbd28ea92') in 0.013764 seconds 
-  Import took 0.016806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Image/UI/UI/UI_option_mouse_click.png
-  artifactKey: Guid(0d8c831d706fb014a81d7b5676c02157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_option_mouse_click.png using Guid(0d8c831d706fb014a81d7b5676c02157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '254ea504f8b7148ba118dbbd169bdb61') in 0.013928 seconds 
-  Import took 0.016911 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/Image/UI/UI/UI_restart_basic.png
-  artifactKey: Guid(54da996472c27ac46b0ab44d58a0a7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/UI/UI/UI_restart_basic.png using Guid(54da996472c27ac46b0ab44d58a0a7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4667f06ebe15919d01577989d5189a7c') in 0.012467 seconds 
-  Import took 0.015305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 194.683574 seconds.
-  path: Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/1스테이지 기본적인 배치 및 느낌입니다..jpg
-  artifactKey: Guid(622c98adddc2529418e7bfa5e46214ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/1스테이지 기본적인 배치 및 느낌입니다..jpg using Guid(622c98adddc2529418e7bfa5e46214ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89b0ffddc5748e4c7e9b731080299ab') in 0.024489 seconds 
-  Import took 0.027579 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_white_tube.png
-  artifactKey: Guid(691d14f6a40b665478ce4efbe80d29ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_white_tube.png using Guid(691d14f6a40b665478ce4efbe80d29ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd109a90de4a4514b275504691cc346be') in 0.015239 seconds 
-  Import took 0.018194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_green_tube.png
-  artifactKey: Guid(986c4b3d073ec0e43a1c1464f9d35b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_green_tube.png using Guid(986c4b3d073ec0e43a1c1464f9d35b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b88aefaada51932ac8f3569649ac7e') in 0.013110 seconds 
-  Import took 0.015973 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_yellow.png
-  artifactKey: Guid(2cae92233283ff7488846ea89ada8b42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_yellow.png using Guid(2cae92233283ff7488846ea89ada8b42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe041afe65b1237782f5f983eccb428') in 0.016492 seconds 
-  Import took 0.019279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_red_tube.png
-  artifactKey: Guid(87f85714e837205479e52c930f885c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_red_tube.png using Guid(87f85714e837205479e52c930f885c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06890797e52d95c1a79bc9bff8e56d96') in 0.012969 seconds 
-  Import took 0.015886 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_orange_tube.png
-  artifactKey: Guid(1b300c89ecb77854f97d609261833589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_orange_tube.png using Guid(1b300c89ecb77854f97d609261833589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '206a11460b0ee140d8d11275486e1a0b') in 0.011893 seconds 
-  Import took 0.014760 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_purple_tube.png
-  artifactKey: Guid(cb0da5016847b584f8c55616083f82ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_purple_tube.png using Guid(cb0da5016847b584f8c55616083f82ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '264818e5fe063a61ff0505a06fa0e7ce') in 0.012489 seconds 
-  Import took 0.015254 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/ant_house_line.png
-  artifactKey: Guid(6c995bffd5a19be459bb32d3e2fdd1a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/ant_house_line.png using Guid(6c995bffd5a19be459bb32d3e2fdd1a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72cab490963066da29b7dcad58d3345e') in 0.020660 seconds 
-  Import took 0.023720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/duck_pond_line.png
-  artifactKey: Guid(65a22f9316801364dabadb128db1e2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/duck_pond_line.png using Guid(65a22f9316801364dabadb128db1e2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6510407bd942903489b38bec817049') in 0.019049 seconds 
-  Import took 0.022052 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000174 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_L_orange.png
-  artifactKey: Guid(5d7bdfeb6fe5d1349ad659b8935a9827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_L_orange.png using Guid(5d7bdfeb6fe5d1349ad659b8935a9827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '590fe88fedc9031c1961b2148a17a449') in 0.013585 seconds 
-  Import took 0.016661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/duck_pond_no_line.png
-  artifactKey: Guid(3ccaf0906713c884588a821415439d3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/duck_pond_no_line.png using Guid(3ccaf0906713c884588a821415439d3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c792ba00f5e11a885322ea4f228914d') in 0.017469 seconds 
-  Import took 0.020840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/ant_2.png
-  artifactKey: Guid(8a3d87f8ae0667f46b43945475eaa8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/ant_2.png using Guid(8a3d87f8ae0667f46b43945475eaa8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7eb71d49cf14cd083845e9d3127161b') in 0.017826 seconds 
-  Import took 0.020776 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_blue_tube.png
-  artifactKey: Guid(fa6cdfa3794ed3946b8904b8539f144c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_blue_tube.png using Guid(fa6cdfa3794ed3946b8904b8539f144c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b29b78d5caa6ffb67d5f06d5cbad862') in 0.011938 seconds 
-  Import took 0.015018 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_black_tube.png
-  artifactKey: Guid(2e6f0edee58563d4a974ccf2c404fa57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_black_tube.png using Guid(2e6f0edee58563d4a974ccf2c404fa57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a036f33a6d9e8915d793260ec2e6b79') in 0.012116 seconds 
-  Import took 0.015364 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_yellow_tube.png
-  artifactKey: Guid(005a0c238bd16bd4e8c8d6855c809e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/ducking_yellow_tube.png using Guid(005a0c238bd16bd4e8c8d6855c809e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c8ef28929df1772ef2fddc4b9fec50') in 0.012670 seconds 
-  Import took 0.015839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000174 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/garden_no_line.png
-  artifactKey: Guid(0038d9e393657454889a9c5ca370bfb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/garden_no_line.png using Guid(0038d9e393657454889a9c5ca370bfb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96cec706593e10157a598616570426be') in 0.020209 seconds 
-  Import took 0.023360 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_E_yellow.png
-  artifactKey: Guid(50310b2d095488e4b81727a2dbb4db21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_E_yellow.png using Guid(50310b2d095488e4b81727a2dbb4db21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6024a28d485f6c4503f9305b4f7b8a2e') in 0.011378 seconds 
-  Import took 0.014169 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_orange.png
-  artifactKey: Guid(377444d7a8fd15c4d98c88d5ae7d1951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_orange.png using Guid(377444d7a8fd15c4d98c88d5ae7d1951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b84b7ec56b75dd9678d11ba1e04f8c') in 0.014701 seconds 
-  Import took 0.017537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/bridge.png
-  artifactKey: Guid(a1868b987b66fbf4b9af863dda292e11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/bridge.png using Guid(a1868b987b66fbf4b9af863dda292e11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '050192312bc373cd232b240876984911') in 0.017119 seconds 
-  Import took 0.020130 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/ant_house_no_line.png
-  artifactKey: Guid(406609a16665e2d4583816407392633d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/ant_house_no_line.png using Guid(406609a16665e2d4583816407392633d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9816d0647f9abee86d296fd8209c3e42') in 0.018428 seconds 
-  Import took 0.021385 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_green.png
-  artifactKey: Guid(4ef37827208335945a9eac3a47a6afd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_green.png using Guid(4ef37827208335945a9eac3a47a6afd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530e72fd94b2bf141c2f9396878454de') in 0.014840 seconds 
-  Import took 0.017657 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_red.png
-  artifactKey: Guid(55ed8368edfd0e542a01dd4bc1a64e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_red.png using Guid(55ed8368edfd0e542a01dd4bc1a64e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1381a4f642eb7a9fb99143ba55d29ff') in 0.014581 seconds 
-  Import took 0.017593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/bear_house_line.png
-  artifactKey: Guid(d8d70a7c90254164e96375a3244448e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/bear_house_line.png using Guid(d8d70a7c90254164e96375a3244448e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeffe91b36d0727684b24923cca221f1') in 0.019550 seconds 
-  Import took 0.022583 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/garden_line.png
-  artifactKey: Guid(099953307a9619741bcc7d25c19b444c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/garden_line.png using Guid(099953307a9619741bcc7d25c19b444c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '179bab5d68d56bd9c9c4a9958479a510') in 0.018288 seconds 
-  Import took 0.021150 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_C_red.png
-  artifactKey: Guid(adb5e48b5ff7d9c49b366a1f59babb0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_C_red.png using Guid(adb5e48b5ff7d9c49b366a1f59babb0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e5a7c97a609801e20492bdadaae285') in 0.013940 seconds 
-  Import took 0.016858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/crumb_bread.png
-  artifactKey: Guid(30413e5a3d6d1ff45a6fb399d5592066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/crumb_bread.png using Guid(30413e5a3d6d1ff45a6fb399d5592066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec0aadbccc4bcdd6b63e9ef214b2273') in 0.017925 seconds 
-  Import took 0.020776 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/ant with bread.png
-  artifactKey: Guid(dff755d4ac587fe4fbb386d4374f8beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/ant with bread.png using Guid(dff755d4ac587fe4fbb386d4374f8beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7013d29639f3d47a1b59b784d1e6c489') in 0.017451 seconds 
-  Import took 0.020558 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_blue.png
-  artifactKey: Guid(020fd997e5278e144b6b31b06f5d00f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_blue.png using Guid(020fd997e5278e144b6b31b06f5d00f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503a56a35646c500a35729960f87e38f') in 0.013454 seconds 
-  Import took 0.016356 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/ant_1.png
-  artifactKey: Guid(ba8570d42834e894792f045cfcc6150c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/1스테이지(숫자놀이)_개미/1스테이지(숫자놀이)_개미/ant_1.png using Guid(ba8570d42834e894792f045cfcc6150c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2667d48329ea42e310cfb97df4e09268') in 0.016957 seconds 
-  Import took 0.019727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_A_green.png
-  artifactKey: Guid(d331affa4eb389a4eb94bed8eca9171e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_A_green.png using Guid(d331affa4eb389a4eb94bed8eca9171e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8ce7a0f278dceddab763f3133f3e48c') in 0.012495 seconds 
-  Import took 0.015458 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/2스테이지 기본적인 배치 및 느낌입니다..PNG
-  artifactKey: Guid(359c8190131c8674f97d1e084bb50706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/2스테이지(색깔놀이)_오리/2스테이지(색깔놀이)_오리/2스테이지 기본적인 배치 및 느낌입니다..PNG using Guid(359c8190131c8674f97d1e084bb50706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf22e5096568cabad5db911ed7752aa') in 0.027294 seconds 
-  Import took 0.030321 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/Image/스테이지 선택 화면/스테이지 선택 화면/bear_house.png
-  artifactKey: Guid(0b5a81bea3b45d24d9f44f58461ad069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/스테이지 선택 화면/스테이지 선택 화면/bear_house.png using Guid(0b5a81bea3b45d24d9f44f58461ad069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a181f96bd14b28f47f9cb923310620a2') in 0.018246 seconds 
-  Import took 0.021115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_R_blue.png
-  artifactKey: Guid(21007025dba35f145ad891848b544e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Image/클리어 화면/클리어 화면/balloon_CLEAR_R_blue.png using Guid(21007025dba35f145ad891848b544e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a0909797f692245a6c67236c70826cb') in 0.012583 seconds 
-  Import took 0.015789 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003881 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.731 seconds
-Domain Reload Profiling:
-	ReloadAssembly (732ms)
-		BeginReloadAssembly (92ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (593ms)
-			LoadAssemblies (67ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (193ms)
-			ReleaseScriptCaches (1ms)
+			SetupTypeCache (201ms)
+			ReleaseScriptCaches (2ms)
 			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (234ms)
+			SetupLoadedEditorAssemblies (232ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (71ms)
+				BeforeProcessingInitializeOnLoad (68ms)
 				ProcessInitializeOnLoadAttributes (145ms)
 				ProcessInitializeOnLoadMethodAttributes (9ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.0 MB.
-System memory in use after: 102.2 MB.
+System memory in use before: 98.7 MB.
+System memory in use after: 98.8 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2732.
-Total: 2.545000 ms (FindLiveObjects: 0.192500 ms CreateObjectMapping: 0.058000 ms MarkObjects: 2.278100 ms  DeleteObjects: 0.015500 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2654.
+Total: 2.532000 ms (FindLiveObjects: 0.170400 ms CreateObjectMapping: 0.051700 ms MarkObjects: 2.294400 ms  DeleteObjects: 0.014700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1563,384 +216,48 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004026 seconds.
+Registered in 0.005204 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.759 seconds
+- Completed reload, in  0.754 seconds
 Domain Reload Profiling:
-	ReloadAssembly (759ms)
-		BeginReloadAssembly (95ms)
+	ReloadAssembly (755ms)
+		BeginReloadAssembly (99ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (617ms)
+		EndReloadAssembly (608ms)
 			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (200ms)
+			SetupTypeCache (209ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (245ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (163ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.0 MB.
-System memory in use after: 102.2 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2734.
-Total: 2.656000 ms (FindLiveObjects: 0.195900 ms CreateObjectMapping: 0.057100 ms MarkObjects: 2.384800 ms  DeleteObjects: 0.017200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003903 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.734 seconds
-Domain Reload Profiling:
-	ReloadAssembly (734ms)
-		BeginReloadAssembly (98ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (592ms)
-			LoadAssemblies (64ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (200ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (226ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.0 MB.
-System memory in use after: 102.3 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2736.
-Total: 2.660800 ms (FindLiveObjects: 0.190900 ms CreateObjectMapping: 0.058200 ms MarkObjects: 2.391400 ms  DeleteObjects: 0.019100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003912 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.744 seconds
-Domain Reload Profiling:
-	ReloadAssembly (744ms)
-		BeginReloadAssembly (94ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (606ms)
-			LoadAssemblies (70ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (214ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (225ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (144ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.0 MB.
-System memory in use after: 102.3 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2738.
-Total: 2.584500 ms (FindLiveObjects: 0.194600 ms CreateObjectMapping: 0.058000 ms MarkObjects: 2.306300 ms  DeleteObjects: 0.024500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003931 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.726 seconds
-Domain Reload Profiling:
-	ReloadAssembly (726ms)
-		BeginReloadAssembly (97ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (585ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (192ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (232ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (152ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.0 MB.
-System memory in use after: 102.3 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2740.
-Total: 2.798400 ms (FindLiveObjects: 0.204400 ms CreateObjectMapping: 0.059400 ms MarkObjects: 2.517500 ms  DeleteObjects: 0.016100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003964 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.718 seconds
-Domain Reload Profiling:
-	ReloadAssembly (719ms)
-		BeginReloadAssembly (87ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (587ms)
-			LoadAssemblies (66ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (195ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (228ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.0 MB.
-System memory in use after: 102.3 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2742.
-Total: 2.799600 ms (FindLiveObjects: 0.208300 ms CreateObjectMapping: 0.058700 ms MarkObjects: 2.515800 ms  DeleteObjects: 0.015800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004328 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.715 seconds
-Domain Reload Profiling:
-	ReloadAssembly (716ms)
-		BeginReloadAssembly (91ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (581ms)
-			LoadAssemblies (64ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (190ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
+			RebuildScriptCaches (28ms)
 			SetupLoadedEditorAssemblies (230ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (147ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (149ms)
 				ProcessInitializeOnLoadMethodAttributes (9ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.1 MB.
-System memory in use after: 102.3 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 98.9 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2744.
-Total: 2.762000 ms (FindLiveObjects: 0.228700 ms CreateObjectMapping: 0.058300 ms MarkObjects: 2.451800 ms  DeleteObjects: 0.022400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003939 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.715 seconds
-Domain Reload Profiling:
-	ReloadAssembly (715ms)
-		BeginReloadAssembly (85ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (586ms)
-			LoadAssemblies (66ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (196ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (225ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (141ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.1 MB.
-System memory in use after: 102.3 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2746.
-Total: 2.707900 ms (FindLiveObjects: 0.200200 ms CreateObjectMapping: 0.056900 ms MarkObjects: 2.433900 ms  DeleteObjects: 0.016100 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2656.
+Total: 2.860000 ms (FindLiveObjects: 0.257800 ms CreateObjectMapping: 0.056300 ms MarkObjects: 2.524600 ms  DeleteObjects: 0.019800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
