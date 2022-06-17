@@ -124,14 +124,14 @@ public class DuckGameMgr : Mgr
 
         if (StartChk == false)
         {
-            FadePanel.DOFade(0, ShowTiem / 1.2f);
+            FadePanel.DOFade(0, ShowTime / 1.2f);
 
             StartChk = true;
 
             GetShuffleList<string>(g_Color);
             SettingBabyDuck();
             SettingColorChatBox();
-            yield return new WaitForSeconds(ShowTiem / 1.2f);
+            yield return new WaitForSeconds(ShowTime / 1.2f);
             FadePanel.gameObject.SetActive(false);
         }
 

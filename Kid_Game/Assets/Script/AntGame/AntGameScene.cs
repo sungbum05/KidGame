@@ -111,8 +111,8 @@ public class AntGameScene : Mgr
         if (StartChk == false)
         {
             yield return null;
-            FadePanel.DOFade(0, ShowTiem / 1.2f);
-            yield return new WaitForSeconds(ShowTiem / 1.2f);
+            FadePanel.DOFade(0, ShowTime / 1.2f);
+            yield return new WaitForSeconds(ShowTime / 1.2f);
             FadePanel.gameObject.SetActive(false);
         }
 

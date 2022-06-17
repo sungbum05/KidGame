@@ -15,7 +15,7 @@ public class Mgr : MonoBehaviour //각 씬 매니져들 상속
     [SerializeField]
     protected bool ClearChk = false;
     [SerializeField]
-    protected float ShowTiem = 1.0f;
+    protected float ShowTime = 1.0f;
     [SerializeField]
     protected Image FadePanel;
     [Space(10)]
