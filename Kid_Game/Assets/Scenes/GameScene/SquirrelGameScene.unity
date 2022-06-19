@@ -169,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8898153, y: -1.1960602}
+  m_Offset: {x: 2.87, y: -1.1960602}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -180,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.563873, y: 9.624224}
+  m_Size: {x: 7.4, y: 9.624224}
   m_EdgeRadius: 0
 --- !u!1 &267824398
 GameObject:
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 696329917}
   - component: {fileID: 696329918}
   m_Layer: 9
-  m_Name: Obj2
+  m_Name: Obj_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 782506293}
   - component: {fileID: 782506294}
   m_Layer: 9
-  m_Name: Obj1
+  m_Name: Obj_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 1334726809}
   - component: {fileID: 1334726810}
   m_Layer: 9
-  m_Name: Obj3
+  m_Name: Obj_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,37 +1575,50 @@ MonoBehaviour:
   balloonburst: {fileID: 0}
   ClearLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   HomeBtn: {fileID: 0}
+  SelectNum: 0
+  ResultNum: 0
   Result: {fileID: 2109780677}
   Shadow: {fileID: 2010752263}
+  SelectObj: {fileID: 0}
   ResultObjImgs:
   - ResultImg: {fileID: 21300000, guid: 93f12e1a4efb5b144881e22352cff3b6, type: 3}
     ShadowImg: {fileID: 21300000, guid: dac762abfce30ed488519d66d46f8b49, type: 3}
+    PickNum: 1
   - ResultImg: {fileID: 21300000, guid: ffc0ea36a559ec540a6321d75cf12473, type: 3}
     ShadowImg: {fileID: 21300000, guid: 2e0578425b414cc4dbf4966f228ea772, type: 3}
+    PickNum: 2
   - ResultImg: {fileID: 21300000, guid: 4921eb59832793f4d90f6a6380a06fa1, type: 3}
     ShadowImg: {fileID: 21300000, guid: cb14830f62549a54080aeb8298deb79a, type: 3}
+    PickNum: 3
   - ResultImg: {fileID: 21300000, guid: 0618ab8ff873f6542ae2a3c2b0c4559b, type: 3}
     ShadowImg: {fileID: 21300000, guid: eeea9331f2680d04d8465d23e1c130b9, type: 3}
+    PickNum: 4
   - ResultImg: {fileID: 21300000, guid: 94004a4392575884e88d5127c4ada08c, type: 3}
     ShadowImg: {fileID: 21300000, guid: 990ad43a786fe6b42a76cccc6cc2883c, type: 3}
+    PickNum: 5
   - ResultImg: {fileID: 21300000, guid: 1bc0fee6f33189348805699379ddda4a, type: 3}
     ShadowImg: {fileID: 21300000, guid: 787260608170d5b4094835a9caf2f4ac, type: 3}
+    PickNum: 6
   Objs:
   - Obj: {fileID: 782506291}
     ObjImg: {fileID: 0}
     OriginalPos: {x: 0, y: 5, z: 0}
+    PickNum: 0
   - Obj: {fileID: 696329915}
     ObjImg: {fileID: 0}
     OriginalPos: {x: 0, y: 0, z: 0}
+    PickNum: 0
   - Obj: {fileID: 1334726807}
     ObjImg: {fileID: 0}
     OriginalPos: {x: 0, y: -5, z: 0}
+    PickNum: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  MouseUpZone: {fileID: 164913296}
+    m_Bits: 512
+  MaxPos: {x: 8.4, y: 4.8}
+  MinPos: {x: 1, y: -4.8}
 --- !u!1 &2109780677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,8 +1644,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109780677}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.2, z: 10}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 164913295}
   m_RootOrder: 0

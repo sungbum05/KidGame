@@ -10,6 +10,7 @@ public class ResultObjClass
 {
     public Sprite ResultImg;
     public Sprite ShadowImg;
+    public int PickNum;
 }
 
 [System.Serializable]
@@ -18,6 +19,13 @@ public class ShowObj
     public GameObject Obj;
     public Sprite ObjImg;
     public Vector3 OriginalPos;
+    public int PickNum;
+}
+
+public enum StageResult
+{
+    Fail = 0,
+    Succes = 1,
 }
 
 public enum ShowType
@@ -30,9 +38,17 @@ public class SquirrelGameMgr : Mgr
 {
     [Header("SquirrelScene_Mgr_attribute")]
     [SerializeField]
+    int SelectNum = 0;
+    [SerializeField]
+    int ResultNum = 0;
+    [SerializeField]
     GameObject Result = null;
     [SerializeField]
     GameObject Shadow = null;
+    [SerializeField]
+    GameObject SelectObj = null;
+
+    [Space(10)]
     [SerializeField]
     List<ResultObjClass> ResultObjImgs = null;
     [SerializeField]
@@ -43,7 +59,9 @@ public class SquirrelGameMgr : Mgr
     [SerializeField]
     LayerMask layerMask;
     [SerializeField]
-    BoxCollider2D MouseUpZone;
+    Vector2 MaxPos;
+    [SerializeField]
+    Vector2 MinPos;
     Vector2 MousePos;
 
     // Start is called before the first frame update
@@ -99,17 +117,27 @@ public class SquirrelGameMgr : Mgr
         CurGameCount += 1;
     }
 
-    #region 내부 랜덤 시스템
+    #region 내부 시스템
     void ShuffleObj() //shadow 랜덤 및 특정 3개 오브젝트 이미지 변경
     {
-        Debug.Log(Objs.Count);
-        Shadow.GetComponent<SpriteRenderer>().sprite = ResultObjImgs[Random.Range(0, Objs.Count)].ShadowImg;
+        int Ran = Random.Range(0, Objs.Count);
+        Shadow.GetComponent<SpriteRenderer>().sprite = ResultObjImgs[Ran].ShadowImg;
+        Result.GetComponent<SpriteRenderer>().sprite = ResultObjImgs[Ran].ResultImg;
+
+        ResultNum = ResultObjImgs[Ran].PickNum;
 
         for (int i = 0; i < Objs.Count; i++)
         {
             Objs[i].ObjImg = ResultObjImgs[i].ResultImg;
+            Objs[i].PickNum = ResultObjImgs[i].PickNum;
             Objs[i].Obj.GetComponent<SpriteRenderer>().sprite = Objs[i].ObjImg;
         }
+    }
+
+    void InfoReset()
+    {
+        SelectObj = null;
+        SelectNum = 0;
     }
     #endregion
 
@@ -133,30 +161,59 @@ public class SquirrelGameMgr : Mgr
             MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, layerMask);
+
             if (hit)
             {
-                string[] SpiltName = hit.collider.name.Split('_');
+                SelectNum = Objs[int.Parse(hit.transform.gameObject.name.Split('_')[1]) - 1].PickNum;
+                SelectObj = hit.transform.gameObject;
+
                 hit.collider.gameObject.transform.position = MousePos;
+                hit.collider.gameObject.transform.localScale = Vector3.one * 2;
             }
         }
     }
 
     void MouseUp()
     {
-        if ((Mathf.Abs(MousePos.x) < Mathf.Abs(MouseUpZone.bounds.extents.x) && Mathf.Abs(MousePos.y) < Mathf.Abs(MouseUpZone.bounds.extents.y)))
+        if (MousePos.x < MaxPos.x && MousePos.x > MinPos.x && MousePos.y < MaxPos.y && MousePos.y > MinPos.y && SelectNum == ResultNum)
         {
             Debug.Log("Yes");
+            StartCoroutine(SuccesThisStage(SelectObj, StageResult.Succes));
         }
 
         else
         {
-
+            Debug.Log("No");
+            StartCoroutine(SuccesThisStage(SelectObj, StageResult.Fail));
         }
     }
     #endregion
 
     #region 오브젝트연출(리스트 등장/삭제, 그림자 등장삭제)
-    IEnumerator ResultObjsProduce(GameObject obj, ShowType type) // 그림자 출연 연출(매개변수: 연출 할 오브젝트, 연출 효과), (효과: 확대, 색 알파)
+    IEnumerator SuccesThisStage(GameObject Obj ,StageResult Type) // 오브젝트가 맞거나 틀릴 때 연출(매개변수: 연출 할 오브젝트, 연출 효과 타입), (효과: 사이즈 조절, 위치 이동, 알파값 조절)
+    {
+        yield return null;
+
+        if((int)Type == 0)
+        {
+            Obj.transform.DOScale(0, ShowTime / 2);
+
+            yield return new WaitForSeconds(ShowTime / 2);
+
+            Obj.transform.localPosition = Objs[int.Parse(Obj.name.Split('_')[1]) - 1].OriginalPos;
+            Obj.transform.DOScale(1, ShowTime / 2);
+            InfoReset();
+        }
+
+        else
+        {
+            SelectObj.SetActive(false);
+            Result.GetComponent<SpriteRenderer>().DOFade(1, ShowTime);
+        }
+        
+    }
+
+    IEnumerator ResultObjsProduce(GameObject obj, ShowType type) // 그림자 출연 연출(매개변수: 연출 할 오브젝트, 연출 효과 타입), (효과: 확대, 색 알파)
     {
         yield return null;
 
