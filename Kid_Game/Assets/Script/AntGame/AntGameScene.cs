@@ -50,22 +50,6 @@ public class AntGameScene : Mgr
     [SerializeField]
     Sprite AntChangeImg;
 
-    #region 게임 끝 연출
-    [Space(10)]
-    [SerializeField]
-    Vector3 BallonSpawnPoint;
-    [SerializeField]
-    List<GameObject> SideClearBallon;
-    [SerializeField]
-    GameObject MainClearBallon;
-    [SerializeField]
-    GameObject balloonburst;
-    [SerializeField]
-    LayerMask ClearLayer;
-    [SerializeField]
-    Button HomeBtn;
-    #endregion
-
     // Start is called before the first frame update
     void Start()
     {
@@ -239,25 +223,4 @@ public class AntGameScene : Mgr
         StartChk = true;
         i = 0;
     }
-
-    IEnumerator ClearShow()
-    {
-        yield return null;
-        FadePanel.gameObject.SetActive(true);
-
-        for (int i = 0; i < 30; i++)
-        {
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
-
-            BallonSpawnPoint = new Vector3(Random.Range(-8.0f, 8.0f), -13.0f, 0f);
-            Instantiate(SideClearBallon[Random.Range(0, SideClearBallon.Count)], BallonSpawnPoint, Quaternion.identity);
-        }
-
-        yield return new WaitForSeconds(0.5f);
-        Instantiate(MainClearBallon, new Vector3(0, -13.0f, 0), Quaternion.identity);
-        yield return new WaitForSeconds(1.0f);
-        HomeBtn.gameObject.SetActive(true);
-    }
-
-   
 }

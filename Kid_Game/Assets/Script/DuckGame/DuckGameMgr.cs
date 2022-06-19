@@ -201,23 +201,4 @@ public class DuckGameMgr : Mgr
 
         ChatBox.sprite = ColorChatBoxkDic[SelectColor];
     } // Ãª¹Ú½º »ö±ò º¯°æ
-
-    IEnumerator ClearShow()
-    {
-        yield return null;
-        FadePanel.gameObject.SetActive(true);
-
-        for (int i = 0; i < 30; i++)
-        {
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
-
-            BallonSpawnPoint = new Vector3(Random.Range(-8.0f, 8.0f), -13.0f, 0f);
-            Instantiate(SideClearBallon[Random.Range(0, SideClearBallon.Count)], BallonSpawnPoint, Quaternion.identity);
-        }
-
-        yield return new WaitForSeconds(0.5f);
-        Instantiate(MainClearBallon, new Vector3(0, -13.0f, 0), Quaternion.identity);
-        yield return new WaitForSeconds(1.0f);
-        HomeBtn.gameObject.SetActive(true);
-    }
 }
