@@ -88,11 +88,33 @@ public class SquirrelGameMgr : Mgr
     {
         yield return null;
 
+        #region 게임 중
         if (StartChk == true) // 게임 하는 중
         {
-            
-        }
+            StartCoroutine(ResultObjsProduce(Shadow, ShowType.Hide));
+            StartCoroutine(ResultObjsProduce(Result, ShowType.Hide));
 
+            for (int i = 0; i < Objs.Count; i++)
+            {
+                StartCoroutine(ObjListProduce(Objs[i].Obj, ShowType.Hide));
+                yield return new WaitForSeconds(ShowTime / 2);
+            }
+
+            InfoReset(StageResult.Succes);
+            yield return new WaitForSeconds(ShowTime);
+
+            ShuffleObj();
+            StartCoroutine(ResultObjsProduce(Shadow, ShowType.Spawn));
+
+            for (int i = 0; i < Objs.Count; i++)
+            {
+                StartCoroutine(ObjListProduce(Objs[i].Obj, ShowType.Spawn));
+                yield return new WaitForSeconds(ShowTime / 2);
+            }
+        }
+        #endregion
+
+        #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
             StartChk = true;
@@ -105,14 +127,17 @@ public class SquirrelGameMgr : Mgr
             for (int i = 0; i < Objs.Count; i++)
             {
                 StartCoroutine(ObjListProduce(Objs[i].Obj, ShowType.Spawn));
-                yield return new WaitForSeconds(ShowTime/2);
+                yield return new WaitForSeconds(ShowTime / 2);
             }
         }
+        #endregion
 
-        else if(StartChk == false && CurGameCount > MaxGameCount) //게임 끝남
+        #region 게임 종료
+        else if (StartChk == false && CurGameCount > MaxGameCount) //게임 끝남
         {
-            
+
         }
+        #endregion
 
         CurGameCount += 1;
     }
@@ -134,10 +159,25 @@ public class SquirrelGameMgr : Mgr
         }
     }
 
-    void InfoReset()
+    void InfoReset(StageResult type)
     {
-        SelectObj = null;
-        SelectNum = 0;
+        if (type == StageResult.Fail)
+        {
+            SelectObj = null;
+            SelectNum = 0;
+        }
+
+        else if (type == StageResult.Succes)
+        {
+            Debug.Log("Asdasd");
+            SelectObj.transform.localPosition = Objs[int.Parse(SelectObj.name.Split('_')[1]) - 1].OriginalPos;
+            SelectObj.SetActive(true);
+
+            SelectObj = null;
+            SelectNum = 0;
+
+            GetShuffleList<ResultObjClass>(ResultObjImgs);
+        }
     }
     #endregion
 
@@ -190,11 +230,11 @@ public class SquirrelGameMgr : Mgr
     #endregion
 
     #region 오브젝트연출(리스트 등장/삭제, 그림자 등장삭제)
-    IEnumerator SuccesThisStage(GameObject Obj ,StageResult Type) // 오브젝트가 맞거나 틀릴 때 연출(매개변수: 연출 할 오브젝트, 연출 효과 타입), (효과: 사이즈 조절, 위치 이동, 알파값 조절)
+    IEnumerator SuccesThisStage(GameObject Obj, StageResult Type) // 오브젝트가 맞거나 틀릴 때 연출(매개변수: 연출 할 오브젝트, 연출 효과 타입), (효과: 사이즈 조절, 위치 이동, 알파값 조절)
     {
         yield return null;
 
-        if((int)Type == 0)
+        if ((int)Type == 0)
         {
             Obj.transform.DOScale(0, ShowTime / 2);
 
@@ -202,15 +242,19 @@ public class SquirrelGameMgr : Mgr
 
             Obj.transform.localPosition = Objs[int.Parse(Obj.name.Split('_')[1]) - 1].OriginalPos;
             Obj.transform.DOScale(1, ShowTime / 2);
-            InfoReset();
+            InfoReset(StageResult.Fail);
         }
 
         else
         {
             SelectObj.SetActive(false);
             Result.GetComponent<SpriteRenderer>().DOFade(1, ShowTime);
+
+            yield return new WaitForSeconds(ShowTime);
+
+            StartCoroutine(StartGame()); //만약 정답이라면 다시 스테이지 시작
         }
-        
+
     }
 
     IEnumerator ResultObjsProduce(GameObject obj, ShowType type) // 그림자 출연 연출(매개변수: 연출 할 오브젝트, 연출 효과 타입), (효과: 확대, 색 알파)

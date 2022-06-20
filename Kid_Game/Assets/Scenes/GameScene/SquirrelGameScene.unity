@@ -909,7 +909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334726807}
   m_LocalRotation: {x: 0, y: 0, z: 0.0008726948, w: 0.99999964}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -5.2, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1677430642}
@@ -1559,7 +1559,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2055311807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5eac21396468147b96e05cc838bb09, type: 3}
+  m_Script: {fileID: 11500000, guid: 0382424f7ed83ab4b810c8bdc79d95e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxGameCount: 5
@@ -1567,7 +1567,7 @@ MonoBehaviour:
   StartChk: 0
   ClearChk: 0
   ShowTime: 1
-  FadePanel: {fileID: 267824399}
+  FadePanel: {fileID: 0}
   ProgressPoint: []
   BallonSpawnPoint: {x: 0, y: 0, z: 0}
   SideClearBallon: []
@@ -1608,11 +1608,11 @@ MonoBehaviour:
     PickNum: 0
   - Obj: {fileID: 696329915}
     ObjImg: {fileID: 0}
-    OriginalPos: {x: 0, y: 0, z: 0}
+    OriginalPos: {x: 0, y: -0.1, z: 0}
     PickNum: 0
   - Obj: {fileID: 1334726807}
     ObjImg: {fileID: 0}
-    OriginalPos: {x: 0, y: -5, z: 0}
+    OriginalPos: {x: 0, y: -5.2, z: 0}
     PickNum: 0
   layerMask:
     serializedVersion: 2
