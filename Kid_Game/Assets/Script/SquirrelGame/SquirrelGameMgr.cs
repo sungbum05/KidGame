@@ -73,6 +73,8 @@ public class SquirrelGameMgr : Mgr
     // Update is called once per frame
     void Update()
     {
+        ProgressSetting();
+
         if (Input.GetMouseButton(0))
         {
             MouseClick();
@@ -103,6 +105,8 @@ public class SquirrelGameMgr : Mgr
             InfoReset(StageResult.Succes);
             yield return new WaitForSeconds(ShowTime);
 
+            CurGameCount++;
+
             ShuffleObj();
             StartCoroutine(ResultObjsProduce(Shadow, ShowType.Spawn));
 
@@ -118,6 +122,8 @@ public class SquirrelGameMgr : Mgr
         else if (StartChk == false) //게임 시작하기 전
         {
             StartChk = true;
+            CurGameCount++;
+
             GetShuffleList<ResultObjClass>(ResultObjImgs);
 
             ShuffleObj();
@@ -133,16 +139,19 @@ public class SquirrelGameMgr : Mgr
         #endregion
 
         #region 게임 종료
-        else if (StartChk == false && CurGameCount > MaxGameCount) //게임 끝남
+        if (ClearChk == true && CurGameCount > MaxGameCount) //게임 끝남
         {
-
+            StartCoroutine(base.ClearShow());
         }
         #endregion
-
-        CurGameCount += 1;
     }
 
     #region 내부 시스템
+    protected override void ProgressSetting()
+    {
+        base.ProgressSetting();
+    }
+
     void ShuffleObj() //shadow 랜덤 및 특정 3개 오브젝트 이미지 변경
     {
         int Ran = Random.Range(0, Objs.Count);

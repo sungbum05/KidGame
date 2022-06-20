@@ -28,22 +28,6 @@ public class DuckGameMgr : Mgr
     private List<Button> BabyDuckBtns; // 애기 오리들 상호 작용 버튼
     #endregion
 
-    #region 게임 끝 연출
-    [Space(10)]
-    [SerializeField]
-    Vector3 BallonSpawnPoint;
-    [SerializeField]
-    List<GameObject> SideClearBallon;
-    [SerializeField]
-    GameObject MainClearBallon;
-    [SerializeField]
-    GameObject balloonburst;
-    [SerializeField]
-    LayerMask ClearLayer;
-    [SerializeField]
-    Button HomeBtn;
-    #endregion
-
     private void Awake()
     {
         DicSetting();
