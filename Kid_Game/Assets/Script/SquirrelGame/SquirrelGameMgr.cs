@@ -195,7 +195,7 @@ public class SquirrelGameMgr : Mgr
     {
         if (ClearChk == true)
         {
-            Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
