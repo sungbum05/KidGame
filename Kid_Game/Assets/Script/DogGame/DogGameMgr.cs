@@ -7,8 +7,12 @@ public class DogGameMgr : Mgr
     [Header("Dog_Mgr_attribute")]
     [SerializeField]
     GameObject FindCircle = null;
+    [SerializeField]
+    List<GameObject> Objs = null;
+    [SerializeField]
+    List<Transform> ObjSpawnPos = null;
 
-    [Header("SquirrelScene_Mgr_Mouse")]
+    [Header("Dog_Mgr_Mouse")]
     [Space(10)]
     [SerializeField]
     LayerMask layerMask;
@@ -25,6 +29,32 @@ public class DogGameMgr : Mgr
     {
         if(Input.GetMouseButton(0))
             MouseClick();
+    }
+
+    IEnumerator StartGame()
+    {
+        yield return null;
+
+        #region 게임 중
+        if (StartChk == true) // 게임 하는 중
+        {
+           
+        }
+        #endregion
+
+        #region 게임 시작 전
+        else if (StartChk == false) //게임 시작하기 전
+        {
+            
+        }
+        #endregion
+
+        #region 게임 종료
+        if (ClearChk == true && CurGameCount > MaxGameCount) //게임 끝남
+        {
+            
+        }
+        #endregion
     }
 
     #region  마우스 상호작용 함수들
@@ -47,4 +77,9 @@ public class DogGameMgr : Mgr
         }
     }
     #endregion
+
+    public void ObjRandomSpawn()
+    {
+        GetShuffleList<Transform>(ObjSpawnPos);
+    }
 }
