@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [System.Serializable]
 public class ObjsAttribute
@@ -99,10 +100,18 @@ public class DogGameMgr : Mgr
         }
     }
 
+    #region 오브젝트 이동 및 연출 효과
     public IEnumerator ShowObj(int ObjNum)
     {
         yield return null;
 
+        FindCircle.gameObject.transform.DOScale(Vector2.zero, ShowTime);
+        yield return new WaitForSeconds(ShowTime);
+
+        GameObject ChildObj = Objs[ObjNum].Obj.transform.GetChild(0).gameObject;
+        ChildObj.GetComponent<SpriteMask>().enabled = true;
+        ChildObj.gameObject.transform.DOScale(0.5f, ShowTime);
+        yield return new WaitForSeconds(ShowTime);
 
 
         StartCoroutine(MoveToObj(ObjNum));
@@ -114,8 +123,6 @@ public class DogGameMgr : Mgr
         Debug.Log(ObjNum);
 
         float UserTime = 1;
-
-        Objs[ObjNum].Obj.transform.GetChild(0).gameObject.GetComponent<SpriteMask>().enabled = true; 
 
         while (true)
         {
@@ -132,5 +139,21 @@ public class DogGameMgr : Mgr
 
         Debug.Log("End");
         Objs[ObjNum].Obj.transform.GetChild(0).gameObject.GetComponent<SpriteMask>().enabled = false;
+        Objs[ObjNum].SuccesObj = true;
+
+        FindCircle.gameObject.transform.DOScale(Vector2.one, ShowTime);
+        yield return new WaitForSeconds(ShowTime);
+
+        StartCoroutine(ClearShow());
     }
+
+    protected override IEnumerator ClearShow()
+    {
+        bool Chk = false;
+
+        foreach
+
+        return base.ClearShow();
+    }
+    #endregion
 }

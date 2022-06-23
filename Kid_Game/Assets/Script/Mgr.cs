@@ -62,7 +62,7 @@ public class Mgr : MonoBehaviour //각 씬 매니져들 상속
         }
     } // 진행상황 바 업데이트
 
-    protected IEnumerator ClearShow()
+    protected virtual IEnumerator ClearShow()
     {
         yield return null;
         FadePanel.gameObject.SetActive(true);
