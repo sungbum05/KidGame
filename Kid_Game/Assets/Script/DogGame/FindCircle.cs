@@ -5,6 +5,8 @@ using UnityEngine;
 public class FindCircle : MonoBehaviour
 {
     [SerializeField]
+    DogGameMgr DogGameMgr;
+    [SerializeField]
     Collider2D ObjCollider = null;
     [Range(0.0f, 5.0f), SerializeField]
     float ColliderRadius = 0;
@@ -32,7 +34,11 @@ public class FindCircle : MonoBehaviour
         if(ObjCollider != null && CurCoolTime <= 0)
         {
             Debug.Log("yes");
-            //ObjCollider.gameObject
+
+            ObjCollider.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
+
+            StartCoroutine(DogGameMgr.ShowObj(int.Parse(ObjCollider.name.Split('_')[1]) - 1));
+            ObjCollider.GetComponent<Collider2D>().enabled = false;
         }
 
         else if(ObjCollider != null)
@@ -44,7 +50,7 @@ public class FindCircle : MonoBehaviour
         {
             CurCoolTime = CoolTime;
         }
-    }
+    }   
 
     private void OnDrawGizmos()
     {
