@@ -1,6 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
+[System.Serializable]
+public class PieceObj
+{
+    public GameObject Obj;
+    public GameObject AnswerObj;
+    public Vector2 AnswerObjPos;
+    public GameObject OriginalPos;
+    public bool SuccesPiece;
+}
 
 public class DogGameMgr : Mgr
 {
@@ -8,31 +19,189 @@ public class DogGameMgr : Mgr
     [SerializeField]
     GameObject FindCircle = null;
     [SerializeField]
-    List<GameObject> Objs = null;
+    List<PieceObj> Objs = null;
     [SerializeField]
     List<Transform> ObjSpawnPos = null;
+
+    [Space]
+    [SerializeField]
+    GameObject SelectObject = null;
+    [SerializeField]
+    GameObject AnswerObject = null;
+    [SerializeField]
+    GameObject SelectAnwerPos = null;
+
+    [Header("Dog_Mgr_ClearShow")]
+    [Space(10)]
+    [SerializeField]
+    GameObject Pieces;
+    [SerializeField]
+    GameObject ShowObjs;
+    [SerializeField]
+    GameObject FrameObj;
 
     [Header("Dog_Mgr_Mouse")]
     [Space(10)]
     [SerializeField]
-    LayerMask layerMask;
+    LayerMask ObjlayerMask;
+    [SerializeField]
+    LayerMask AnswerObjlayerMask;
     Vector2 MousePos;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetShuffleList<Transform>(ObjSpawnPos);
-
-        for (int i = 0; i < Objs.Count; i++)
-        {
-            Objs[i].transform.localPosition = ObjSpawnPos[i].transform.localPosition;
-        }
-
+        StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButton(0))
+        {
+            MouseClick();
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            MouseUp();
+        }
     }
+
+    IEnumerator StartGame()
+    {
+        yield return null;
+
+        #region 게임 중
+        if (StartChk == true) // 게임 하는 중
+        {
+
+        }
+        #endregion
+
+        #region 게임 시작 전
+        else if (StartChk == false) //게임 시작하기 전
+        {
+            StartChk = true;
+
+            BasicSetting();
+        }
+        #endregion
+
+        #region 게임 종료
+        if (ClearChk == true) //게임 끝남
+        {
+            Debug.Log("eend");
+            StartCoroutine(ClearShow());
+        }
+        #endregion
+    }
+
+    #region  마우스 상호작용 함수들
+    void MouseClick() // 마우스를 누르고 있는동안 ray실행
+    {
+        if (ClearChk == true)
+        {
+            MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
+            if (hit)
+            {
+
+            }
+        }
+
+        else
+        {
+            MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            RaycastHit2D Objhit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ObjlayerMask);
+            if (Objhit)
+            {
+                Objhit.collider.gameObject.transform.position = MousePos;
+
+                MatchingObject(Objhit.collider.gameObject);
+            }
+
+            RaycastHit2D AnswerObj = Physics2D.Raycast(MousePos, transform.forward, 10.0f, AnswerObjlayerMask);
+            if (AnswerObj)
+            {
+                SelectAnwerPos = AnswerObj.collider.gameObject;
+            }
+        }
+    }
+
+    void MouseUp()
+    {
+        if(AnswerObject == SelectAnwerPos)
+        {
+            StartCoroutine(SelectObject.GetComponent<PieceMove>().MoveToObj(SelectObject, AnswerObject));
+            ResetObject(int.Parse(SelectObject.name.Split('_')[1]) - 1);
+        }
+
+        else
+        {
+            SelectObject.transform.position = Objs[int.Parse(SelectObject.name.Split('_')[1]) - 1].OriginalPos.transform.position;
+        }
+    }
+    #endregion
+
+    #region 시스템 내부 기능
+    void BasicSetting()
+    {
+        GetShuffleList<Transform>(ObjSpawnPos);
+
+        for (int i = 0; i < Objs.Count; i++)
+        {
+            Objs[i].Obj.transform.localPosition = ObjSpawnPos[i].transform.localPosition;
+            Objs[i].OriginalPos = ObjSpawnPos[i].gameObject;
+
+            Objs[i].AnswerObj.transform.position = Objs[i].AnswerObjPos;
+        }
+
+    }
+
+    void MatchingObject(GameObject Obj)
+    {
+        SelectObject = Obj;
+        AnswerObject = Objs[int.Parse(Obj.name.Split('_')[1]) - 1].AnswerObj;
+    }
+
+    void ResetObject(int ObjNum)
+    {
+        SelectObject.GetComponent<CircleCollider2D>().enabled = false;
+        Objs[ObjNum].Obj.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        Objs[ObjNum].SuccesPiece = true;
+
+        SelectObject = null;
+        AnswerObject = null;
+        SelectAnwerPos = null;
+
+        int EndCheak = 0;
+
+        foreach(var obj in Objs)
+        {
+            EndCheak += obj.SuccesPiece == true ? 1 : 0;
+        }
+
+        if (EndCheak >= Objs.Count)
+        {
+            ClearChk = true;
+            StartCoroutine(StartGame());
+        }
+    }
+
+    protected override IEnumerator ClearShow()
+    {
+        yield return null;
+        yield return new WaitForSeconds(ShowTime / 3);
+
+        Pieces.gameObject.SetActive(false);
+        ShowObjs.gameObject.SetActive(true);
+
+        FrameObj.GetComponent<SpriteRenderer>().DOFade(0, ShowTime * 2);
+
+        //base.ClearShow();
+    }
+    #endregion
 }
