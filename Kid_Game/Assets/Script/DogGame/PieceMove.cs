@@ -7,21 +7,7 @@ public class PieceMove : MonoBehaviour
     public IEnumerator MoveToObj(GameObject SelectObj, GameObject AnswerObj)
     {
         yield return null;
-
-        float UserTime = 1;
-
-        while (true)
-        {
-            yield return null;
-
-            UserTime += (Time.deltaTime * 3);
-
-            SelectObj.transform.position = Vector2.Lerp(SelectObj.transform.position,
-                AnswerObj.transform.position, 1.5f * Time.deltaTime * UserTime);
-
-            if (SelectObj.transform.position == AnswerObj.transform.position)
-                break;
-        }
+        SelectObj.transform.position = AnswerObj.transform.position;
 
         StopCoroutine(MoveToObj(SelectObj, AnswerObj));
     }

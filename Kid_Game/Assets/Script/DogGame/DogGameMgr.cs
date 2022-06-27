@@ -17,8 +17,6 @@ public class DogGameMgr : Mgr
 {
     [Header("Dog_Mgr_attribute")]
     [SerializeField]
-    GameObject FindCircle = null;
-    [SerializeField]
     List<PieceObj> Objs = null;
     [SerializeField]
     List<Transform> ObjSpawnPos = null;
@@ -82,6 +80,7 @@ public class DogGameMgr : Mgr
         #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
+            FadePanel.DOFade(0, ShowTime / 1.2f);
             StartChk = true;
 
             BasicSetting();
@@ -107,7 +106,8 @@ public class DogGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
-
+                Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
+                Destroy(hit.collider.gameObject);
             }
         }
 
@@ -133,15 +133,18 @@ public class DogGameMgr : Mgr
 
     void MouseUp()
     {
-        if(AnswerObject == SelectAnwerPos)
+        if (ClearChk == false)
         {
-            StartCoroutine(SelectObject.GetComponent<PieceMove>().MoveToObj(SelectObject, AnswerObject));
-            ResetObject(int.Parse(SelectObject.name.Split('_')[1]) - 1);
-        }
+            if (AnswerObject == SelectAnwerPos)
+            {
+                StartCoroutine(SelectObject.GetComponent<PieceMove>().MoveToObj(SelectObject, AnswerObject));
+                ResetObject(int.Parse(SelectObject.name.Split('_')[1]) - 1);
+            }
 
-        else
-        {
-            SelectObject.transform.position = Objs[int.Parse(SelectObject.name.Split('_')[1]) - 1].OriginalPos.transform.position;
+            else
+            {
+                SelectObject.transform.position = Objs[int.Parse(SelectObject.name.Split('_')[1]) - 1].OriginalPos.transform.position;
+            }
         }
     }
     #endregion
@@ -196,12 +199,15 @@ public class DogGameMgr : Mgr
         yield return null;
         yield return new WaitForSeconds(ShowTime / 3);
 
+        ClearChk = true;
+
         Pieces.gameObject.SetActive(false);
         ShowObjs.gameObject.SetActive(true);
 
         FrameObj.GetComponent<SpriteRenderer>().DOFade(0, ShowTime * 2);
 
-        //base.ClearShow();
+        yield return new WaitForSeconds(ShowTime * 2);
+        yield return base.ClearShow();
     }
     #endregion
 }

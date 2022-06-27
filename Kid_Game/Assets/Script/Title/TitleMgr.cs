@@ -30,6 +30,15 @@ public class TitleMgr : MonoBehaviour
     private float MoveDis = 30.0f;
 
 
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+    [SerializeField]
+    private Button ExitBtn;
+    [SerializeField]
+    private Button CloseBtn;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +85,8 @@ public class TitleMgr : MonoBehaviour
     {
         Title.GetComponent<Image>().DOFade(0, ShowTiem/2);
         StartBtn.GetComponent<Image>().DOFade(0, ShowTiem/2);
+        OptionBtn.transform.gameObject.GetComponent<Image>().DOFade(0, ShowTiem / 2);
+        ExitBtn.transform.gameObject.GetComponent<Image>().DOFade(0, ShowTiem / 2);
     }
 
     void FadeInObj()

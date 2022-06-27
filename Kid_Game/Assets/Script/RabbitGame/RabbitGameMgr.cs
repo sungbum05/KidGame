@@ -71,7 +71,9 @@ public class RabbitGameMgr : Mgr
         #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
+            FadePanel.DOFade(0, ShowTime / 1.2f);
             StartChk = true;
+
             SlideObj();
         }
         #endregion
@@ -94,7 +96,8 @@ public class RabbitGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
-
+                Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
+                Destroy(hit.collider.gameObject);
             }
         }
 
@@ -182,12 +185,13 @@ public class RabbitGameMgr : Mgr
     protected override IEnumerator ClearShow()
     {
         yield return null;
+        ClearChk = true;
 
         foreach (var obj in stage6CanMoveObjs[0].ObjType)
         {
             obj.Obj.transform.GetChild(0).gameObject.SetActive(true);
         }
 
-        //return base.ClearShow();
+        yield return base.ClearShow();
     }
 }

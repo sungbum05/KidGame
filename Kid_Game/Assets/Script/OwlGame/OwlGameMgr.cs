@@ -55,6 +55,8 @@ public class OwlGameMgr : Mgr
         #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
+            FadePanel.DOFade(0, ShowTime / 1.2f);
+
             StartChk = true;
 
             ObjRandomSpawn();
@@ -62,7 +64,7 @@ public class OwlGameMgr : Mgr
         #endregion
 
         #region 게임 종료
-        if (ClearChk == true && CurGameCount > MaxGameCount) //게임 끝남
+        if (ClearChk == true) //게임 끝남
         {
 
         }
@@ -79,7 +81,8 @@ public class OwlGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
-
+                Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
+                Destroy(hit.collider.gameObject);
             }
         }
 
@@ -164,8 +167,11 @@ public class OwlGameMgr : Mgr
         {
             Debug.Log("asd");
             FindCircle.gameObject.transform.DOScale(10, ShowTime * 5);
+            FindCircle.GetComponent<FindCircle>().enabled = false;
+            ClearChk = true;
 
-            //yield return base.ClearShow();
+            yield return new WaitForSeconds(ShowTime * 5);
+            yield return base.ClearShow();
         }
     }
     #endregion
