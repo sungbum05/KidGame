@@ -56,6 +56,14 @@ public class TitleMgr : MonoBehaviour
         });
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SoundMgr.In.PlaySound("y2mate.com - 이세계아이돌 ISEGYE IDOL  리와인드 REWIND MV");
+        }
+    }
+
     IEnumerator YetStartGame()
     {
         yield return null;
