@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.UI;
+
+enum AntState
+{
+    Idle, Surprise, Like
+}
 
 public class AntGameScene : Mgr
 {
@@ -32,8 +37,6 @@ public class AntGameScene : Mgr
     private List<GameObject> Bread;
     [SerializeField]
     private List<GameObject> BreadPos;
-    [SerializeField]
-    private float ShowTime = 1.0f;
 
     [Space(10)]
     [SerializeField]
@@ -80,6 +83,8 @@ public class AntGameScene : Mgr
         if (CurGameCount > MaxGameCount && ClearChk == false)
         {
             ClearChk = true;
+
+            Debug.Log("end");
             StartCoroutine(ClearShow());
         }
     }
@@ -140,22 +145,29 @@ public class AntGameScene : Mgr
 
     void MouseUp()
     {
-        if((Mathf.Abs(MousePos.x) < Mathf.Abs(AntZone.bounds.extents.x) && Mathf.Abs(MousePos.y) < Mathf.Abs(AntZone.bounds.extents.y)) && SelectNum == PickNum)
+        if (ClearChk == false)
         {
-            Debug.Log("Yes");
-            foreach(Transform Child in Ants.transform)
+            if ((Mathf.Abs(MousePos.x) < Mathf.Abs(AntZone.bounds.extents.x) && Mathf.Abs(MousePos.y) < Mathf.Abs(AntZone.bounds.extents.y)) && SelectNum == PickNum)
             {
-                Child.gameObject.GetComponent<SpriteRenderer>().sprite = AntChangeImg;
-                Bread[PickNum - 1].SetActive(false);
+                Debug.Log("Yes");
+                foreach (Transform Child in Ants.transform)
+                {
+                    Child.gameObject.GetComponent<SpriteRenderer>().sprite = AntChangeImg;
+                    StartCoroutine(AnimatorSet(AntState.Like));
+
+                    Bread[PickNum - 1].SetActive(false);
+                }
+
+                StartCoroutine(ExitAnt());
             }
 
-            StartCoroutine(ExitAnt());
-        }
+            else
+            {
+                Bread[PickNum - 1].transform.DOMove(BreadPos[PickNum - 1].transform.position, ShowTime / 2);
+                StartCoroutine(AnimatorSet(AntState.Surprise));
 
-        else
-        {
-            Bread[PickNum - 1].transform.DOMove(BreadPos[PickNum - 1].transform.position, ShowTime / 2);
-            PickNum = 0;
+                PickNum = 0;
+            }
         }
     }
     #endregion
@@ -169,6 +181,8 @@ public class AntGameScene : Mgr
         SelectNum = int.Parse(SplitName[1]);
 
         Ants = Instantiate(AntGroup[0], EnterPos, Quaternion.identity);
+        StartCoroutine(AnimatorSet(AntState.Idle));
+
         Ants.transform.DOMove(StayPos, ShowTime * 1.5f);
 
         yield return new WaitForSeconds(ShowTime * 2.0f);
@@ -176,7 +190,8 @@ public class AntGameScene : Mgr
 
     IEnumerator ExitAnt()
     {
-        yield return null;
+        yield return new WaitForSeconds(ShowTime);
+
         Ants.transform.DOMove(ExitPos, ShowTime * 2.0f);
 
         yield return new WaitForSeconds(ShowTime * 2);
@@ -222,5 +237,46 @@ public class AntGameScene : Mgr
 
         StartChk = true;
         i = 0;
+    }
+
+    IEnumerator AnimatorSet(AntState State)
+    {
+        switch((int)State)
+        {
+            case 0:
+                foreach(Transform Ant in Ants.transform)
+                {
+                    Ant.gameObject.GetComponent<Animator>().SetBool("Idle", true);
+                    Ant.gameObject.GetComponent<Animator>().SetBool("False", false);
+                    Ant.gameObject.GetComponent<Animator>().SetBool("Succes", false);
+                }
+                break;
+
+            case 1:
+                foreach (Transform Ant in Ants.transform)
+                {
+                    Ant.gameObject.GetComponent<Animator>().SetBool("Idle", false);
+                    Ant.gameObject.GetComponent<Animator>().SetBool("False", true);
+                    Ant.gameObject.GetComponent<Animator>().SetBool("Succes", false);
+                }
+                yield return new WaitForSeconds(ShowTime / 1.5f);
+
+                StartCoroutine(AnimatorSet(AntState.Idle));
+                break;
+
+            case 2:
+                foreach (Transform Ant in Ants.transform)
+                {
+                    Ant.gameObject.GetComponent<Animator>().SetBool("Idle", false);
+                    Ant.gameObject.GetComponent<Animator>().SetBool("False", false);
+                    Ant.gameObject.GetComponent<Animator>().SetBool("Succes", true);
+                }
+                break;
+        }
+    }
+
+    protected override IEnumerator ClearShow()
+    {
+        yield return base.ClearShow();
     }
 }

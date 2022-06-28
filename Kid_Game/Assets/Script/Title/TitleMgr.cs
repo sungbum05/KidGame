@@ -38,6 +38,12 @@ public class TitleMgr : MonoBehaviour
     [SerializeField]
     private Button CloseBtn;
 
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
+    [SerializeField]
+    private GameObject CreditPan;
+
 
     // Start is called before the first frame update
     void Start()
@@ -77,7 +83,7 @@ public class TitleMgr : MonoBehaviour
         StartCoroutine(CameraFocusUp());
         yield return new WaitForSeconds(ShowTiem);
         FadeInObj();
-        yield return new WaitForSeconds(ShowTiem / 2);
+        yield return new WaitForSeconds(ShowTiem);
         SceneManager.LoadScene("SelectStageScene");
     }
 
@@ -99,5 +105,34 @@ public class TitleMgr : MonoBehaviour
         yield return null;
 
         MainCamera.DOOrthoSize(2, ShowTiem / 1.3f);
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+
+#else
+    Application.Quit();
+
+#endif
+    }
+
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+            OptionPan.SetActive(false);
+
+        else
+            OptionPan.SetActive(true);
+    }
+
+    public void CreditPanOnOff()
+    {
+        if (CreditPan.active)
+            CreditPan.SetActive(false);
+
+        else
+            CreditPan.SetActive(true);
     }
 }

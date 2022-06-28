@@ -45,8 +45,8 @@ public class Mgr : MonoBehaviour //각 씬 매니져들 상속
         {
             int i = 0;
 
-            if (CurGameCount > MaxGameCount)
-                ClearChk = true;
+            //if (CurGameCount > MaxGameCount)
+            //    ClearChk = true;
 
             foreach (GameObject obj in ProgressPoint)
             {

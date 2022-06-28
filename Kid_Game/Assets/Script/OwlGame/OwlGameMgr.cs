@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+enum OwlState
+{
+    Idle, Like
+}
+
 [System.Serializable]
 public class ObjsAttribute
 {
@@ -21,6 +26,8 @@ public class OwlGameMgr : Mgr
     List<ObjsAttribute> Objs = null;
     [SerializeField]
     List<Transform> ObjSpawnPos = null;
+    [SerializeField]
+    GameObject Owl;
 
     [Header("Owl_Mgr_Mouse")]
     [Space(10)]
@@ -55,6 +62,7 @@ public class OwlGameMgr : Mgr
         #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
+            StartCoroutine(AnimatorSet(OwlState.Idle));
             FadePanel.DOFade(0, ShowTime / 1.2f);
 
             StartChk = true;
@@ -122,6 +130,8 @@ public class OwlGameMgr : Mgr
 
     IEnumerator MoveToObj(int ObjNum)
     {
+        StartCoroutine(AnimatorSet(OwlState.Like));
+
         yield return null;
         Debug.Log(ObjNum);
 
@@ -148,6 +158,29 @@ public class OwlGameMgr : Mgr
         yield return new WaitForSeconds(ShowTime);
 
         StartCoroutine(ClearShow());
+    }
+
+    IEnumerator AnimatorSet(OwlState State)
+    {
+        switch ((int)State)
+        {
+            case 0:
+
+                Owl.gameObject.GetComponent<Animator>().SetBool("Idle", true);
+                Owl.gameObject.GetComponent<Animator>().SetBool("False", false);
+                Owl.gameObject.GetComponent<Animator>().SetBool("Succes", false);
+
+                break;
+
+            case 1:
+                Owl.gameObject.GetComponent<Animator>().SetBool("Idle", false);
+                Owl.gameObject.GetComponent<Animator>().SetBool("False", false);
+                Owl.gameObject.GetComponent<Animator>().SetBool("Succes", true);
+                yield return new WaitForSeconds(ShowTime);
+
+                StartCoroutine(AnimatorSet(OwlState.Idle));
+                break;
+        }
     }
 
     protected override IEnumerator ClearShow()

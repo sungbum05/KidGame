@@ -224,6 +224,7 @@ MonoBehaviour:
   - {fileID: 1088883756}
   - {fileID: 148820471}
   - {fileID: 1832561319}
+  Dog: {fileID: 461581050}
   SelectObject: {fileID: 0}
   AnswerObject: {fileID: 0}
   SelectAnwerPos: {fileID: 0}
@@ -936,6 +937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461581052}
   - component: {fileID: 461581051}
+  - component: {fileID: 461581053}
   m_Layer: 0
   m_Name: dog
   m_TagString: Untagged
@@ -1008,6 +1010,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &461581053
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461581050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c59eb2d68289ef7499a50443a139f976, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &512848913
 GameObject:
   m_ObjectHideFlags: 0

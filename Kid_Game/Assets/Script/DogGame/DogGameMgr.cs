@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+enum DogState
+{
+    Idle, Angry, Like
+}
+
 [System.Serializable]
 public class PieceObj
 {
@@ -20,6 +25,8 @@ public class DogGameMgr : Mgr
     List<PieceObj> Objs = null;
     [SerializeField]
     List<Transform> ObjSpawnPos = null;
+    [SerializeField]
+    GameObject Dog;
 
     [Space]
     [SerializeField]
@@ -80,6 +87,7 @@ public class DogGameMgr : Mgr
         #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
+            StartCoroutine(AnimatorSet(DogState.Idle));
             FadePanel.DOFade(0, ShowTime / 1.2f);
             StartChk = true;
 
@@ -137,12 +145,15 @@ public class DogGameMgr : Mgr
         {
             if (AnswerObject == SelectAnwerPos)
             {
+                StartCoroutine(AnimatorSet(DogState.Like));
+
                 StartCoroutine(SelectObject.GetComponent<PieceMove>().MoveToObj(SelectObject, AnswerObject));
                 ResetObject(int.Parse(SelectObject.name.Split('_')[1]) - 1);
             }
 
             else
             {
+                StartCoroutine(AnimatorSet(DogState.Angry));
                 SelectObject.transform.position = Objs[int.Parse(SelectObject.name.Split('_')[1]) - 1].OriginalPos.transform.position;
             }
         }
@@ -182,7 +193,7 @@ public class DogGameMgr : Mgr
 
         int EndCheak = 0;
 
-        foreach(var obj in Objs)
+        foreach (var obj in Objs)
         {
             EndCheak += obj.SuccesPiece == true ? 1 : 0;
         }
@@ -191,6 +202,39 @@ public class DogGameMgr : Mgr
         {
             ClearChk = true;
             StartCoroutine(StartGame());
+        }
+    }
+
+    IEnumerator AnimatorSet(DogState State)
+    {
+        switch ((int)State)
+        {
+            case 0:
+
+                Dog.gameObject.GetComponent<Animator>().SetBool("Idle", true);
+                Dog.gameObject.GetComponent<Animator>().SetBool("False", false);
+                Dog.gameObject.GetComponent<Animator>().SetBool("Succes", false);
+
+                break;
+
+            case 1:
+
+                Dog.gameObject.GetComponent<Animator>().SetBool("Idle", false);
+                Dog.gameObject.GetComponent<Animator>().SetBool("False", true);
+                Dog.gameObject.GetComponent<Animator>().SetBool("Succes", false);
+                yield return new WaitForSeconds(ShowTime / 1.5f);
+
+                StartCoroutine(AnimatorSet(DogState.Idle));
+                break;
+
+            case 2:
+                Dog.gameObject.GetComponent<Animator>().SetBool("Idle", false);
+                Dog.gameObject.GetComponent<Animator>().SetBool("False", false);
+                Dog.gameObject.GetComponent<Animator>().SetBool("Succes", true);
+                yield return new WaitForSeconds(ShowTime / 1.5f);
+
+                StartCoroutine(AnimatorSet(DogState.Idle));
+                break;
         }
     }
 
