@@ -375,6 +375,7 @@ MonoBehaviour:
   RetryBtn: {fileID: 310306610}
   SelectObj: {fileID: 0}
   AnswerObj: {fileID: 0}
+  Baths: {fileID: 412224427}
   stage6CanMoveObjs:
   - ObjType:
     - Obj: {fileID: 2026416712}

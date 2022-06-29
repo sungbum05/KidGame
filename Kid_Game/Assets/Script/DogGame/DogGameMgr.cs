@@ -68,6 +68,8 @@ public class DogGameMgr : Mgr
     // Start is called before the first frame update
     void Start()
     {
+        SoundMgr.In.ChangeBGM("Cute_Avalanche_-_RKVC");
+
         HomeBtn.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("SelectStageScene");
@@ -140,6 +142,8 @@ public class DogGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
+                SoundMgr.In.PlaySound("Balloon_Pop");
+
                 Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
                 Destroy(hit.collider.gameObject);
             }
@@ -171,6 +175,7 @@ public class DogGameMgr : Mgr
         {
             if (AnswerObject == SelectAnwerPos)
             {
+                SoundMgr.In.PlaySound("Succes");
                 StartCoroutine(AnimatorSet(DogState.Like));
 
                 StartCoroutine(SelectObject.GetComponent<PieceMove>().MoveToObj(SelectObject, AnswerObject));
@@ -179,6 +184,8 @@ public class DogGameMgr : Mgr
 
             else
             {
+                SoundMgr.In.PlaySound("Fail");
+
                 StartCoroutine(AnimatorSet(DogState.Angry));
                 SelectObject.transform.position = Objs[int.Parse(SelectObject.name.Split('_')[1]) - 1].OriginalPos.transform.position;
             }

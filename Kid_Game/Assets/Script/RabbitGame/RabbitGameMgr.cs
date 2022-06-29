@@ -27,6 +27,9 @@ public class RabbitGameMgr : Mgr
     GameObject SelectObj = null;
     [SerializeField]
     GameObject AnswerObj = null;
+
+    [Space(), SerializeField]
+    GameObject Baths;
     [SerializeField]
     List<Stage6CanMoveObj> stage6CanMoveObjs = null;
     [SerializeField]
@@ -52,6 +55,8 @@ public class RabbitGameMgr : Mgr
 
     void Start()
     {
+        //SoundMgr.In.ChangeBGM("Sand_Castle_-_Quincas_Moreira");
+
         HomeBtn.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("SelectStageScene");
@@ -121,6 +126,8 @@ public class RabbitGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
+                SoundMgr.In.PlaySound("Balloon_Pop");
+
                 Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
                 Destroy(hit.collider.gameObject);
             }
@@ -159,6 +166,8 @@ public class RabbitGameMgr : Mgr
 
             if (ObjNumberSum == 0)
             {
+                SoundMgr.In.PlaySound("Succes");
+
                 SelectObj.GetComponent<ObjShowMove>().StartObjShow();
 
                 SelectObj.transform.position = stage6CanMoveObjs[CurGameCount].ObjType[SelectObjNum].FixPos;
@@ -172,6 +181,8 @@ public class RabbitGameMgr : Mgr
 
             else
             {
+                SoundMgr.In.PlaySound("Fail");
+
                 SelectObj.transform.position = stage6CanMoveObjs[CurGameCount].ObjType[SelectObjNum].OrizinalPos;
             }
             #endregion
@@ -201,6 +212,7 @@ public class RabbitGameMgr : Mgr
 
         else
         {
+
             StartCoroutine(ClearShow());
         }
 
@@ -210,6 +222,15 @@ public class RabbitGameMgr : Mgr
     protected override IEnumerator ClearShow()
     {
         yield return null;
+
+        foreach (Transform Obj1 in Baths.transform)
+        {
+            foreach(Transform Obj2 in Obj1.transform)
+            {
+                Obj2.gameObject.transform.GetComponent<SpriteRenderer>().DOFade(0, ShowTime);
+            }
+        }
+
         ClearChk = true;
 
         foreach (var obj in stage6CanMoveObjs[0].ObjType)

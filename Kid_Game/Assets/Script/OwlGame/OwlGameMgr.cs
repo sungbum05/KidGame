@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 enum OwlState
 {
@@ -50,6 +50,8 @@ public class OwlGameMgr : Mgr
     // Start is called before the first frame update
     void Start()
     {
+        SoundMgr.In.ChangeBGM("Racing_The_Clock_-_The_Green_Orbs");
+
         HomeBtn.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("SelectStageScene");
@@ -114,6 +116,8 @@ public class OwlGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
+                SoundMgr.In.PlaySound("Balloon_Pop");
+
                 Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
                 Destroy(hit.collider.gameObject);
             }
@@ -139,6 +143,8 @@ public class OwlGameMgr : Mgr
     #region 오브젝트 이동 및 연출 효과
     public IEnumerator ShowObj(int ObjNum)
     {
+        SoundMgr.In.PlaySound("Succes");
+
         yield return null;
 
         FindCircle.gameObject.transform.DOScale(Vector2.zero, ShowTime);
@@ -224,7 +230,7 @@ public class OwlGameMgr : Mgr
         if (Chk)
         {
             Debug.Log("asd");
-            FindCircle.gameObject.transform.DOScale(10, ShowTime * 5);
+            FindCircle.gameObject.transform.DOScale(15, ShowTime * 5);
             FindCircle.GetComponent<FindCircle>().enabled = false;
             ClearChk = true;
 

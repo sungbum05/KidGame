@@ -44,6 +44,8 @@ public class DuckGameMgr : Mgr
     // Start is called before the first frame update
     void Start()
     {
+        SoundMgr.In.ChangeBGM("Jigsaw_Puzzle_-_The_Green_Orbs");
+
         HomeBtn.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("SelectStageScene");
@@ -63,8 +65,15 @@ public class DuckGameMgr : Mgr
             {
                 if (Btn.GetComponent<BabyDuckInfo>().BabyColor == SelectColor)
                 {
+                    SoundMgr.In.PlaySound("Succes");
+
                     StartCoroutine(StartGame());
                     Debug.Log(Btn.name);
+                }
+
+                else
+                {
+                    SoundMgr.In.PlaySound("Fail");
                 }
             });
         }  
@@ -98,6 +107,8 @@ public class DuckGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
+                SoundMgr.In.PlaySound("Balloon_Pop");
+
                 Instantiate(balloonburst, new Vector2 (hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
                 Destroy(hit.collider.gameObject);
             }

@@ -77,6 +77,8 @@ public class SquirrelGameMgr : Mgr
     // Start is called before the first frame update
     void Start()
     {
+        SoundMgr.In.ChangeBGM("Calimba - E's Jammy Jams");
+
         HomeBtn.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("SelectStageScene");
@@ -231,6 +233,8 @@ public class SquirrelGameMgr : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
+                SoundMgr.In.PlaySound("Balloon_Pop");
+
                 Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
                 Destroy(hit.collider.gameObject);
             }
@@ -257,12 +261,16 @@ public class SquirrelGameMgr : Mgr
     {
         if (MousePos.x < MaxPos.x && MousePos.x > MinPos.x && MousePos.y < MaxPos.y && MousePos.y > MinPos.y && SelectNum == ResultNum)
         {
+            SoundMgr.In.PlaySound("Succes");
+
             Debug.Log("Yes");
             StartCoroutine(SuccesThisStage(SelectObj, StageResult.Succes));
         }
 
         else
         {
+            SoundMgr.In.PlaySound("Fail");
+
             Debug.Log("No");
             StartCoroutine(SuccesThisStage(SelectObj, StageResult.Fail));
         }

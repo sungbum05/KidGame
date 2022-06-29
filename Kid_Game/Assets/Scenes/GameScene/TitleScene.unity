@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 22.820068}
-  m_SizeDelta: {x: 329, y: 329}
+  m_SizeDelta: {x: 361, y: 361}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &142914608
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -190,8 +190,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 19eefbacad9ac2144bfbf76d61823272, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: e04e3326c90ccdd4092d5d96372cc8f1, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1266638e0fbb4348bd0f16a6f2938f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c360f6e0a2038ec4ba26f3f5a67f3bf6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2055,9 +2055,17 @@ MonoBehaviour:
   masterVolumeSFX: 1
   masterVolumeBGM: 1
   BGMClip:
-  - {fileID: 8300000, guid: 033ea0589f787504aac45525591188b3, type: 3}
+  - {fileID: 8300000, guid: 9e21e9fc4bc86f14b9196e8029945eb7, type: 3}
+  - {fileID: 8300000, guid: af01bca421cca6c499fb3be84e9a3ea5, type: 3}
+  - {fileID: 8300000, guid: 166421dfe16f6974f8f09059f9ef53af, type: 3}
+  - {fileID: 8300000, guid: ed173c9d60618d74387d95a3ee468003, type: 3}
+  - {fileID: 8300000, guid: e02ccc855a0fadb419496aea033997bb, type: 3}
+  - {fileID: 8300000, guid: d065761745b30a64da5a9b9dbb6cbb11, type: 3}
+  - {fileID: 8300000, guid: d0ba0959205559d43829e3c5c25999ba, type: 3}
   SFXClip:
-  - {fileID: 8300000, guid: 033ea0589f787504aac45525591188b3, type: 3}
+  - {fileID: 8300000, guid: f50600195e1410140a43c787657c819a, type: 3}
+  - {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  - {fileID: 8300000, guid: cf6c0e7fbef9449c98a0cdb5ea0c4d9f, type: 3}
   OtherPanel: {fileID: 0}
 --- !u!82 &2009871441
 AudioSource:

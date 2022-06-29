@@ -67,6 +67,8 @@ public class AntGameScene : Mgr
     // Start is called before the first frame update
     void Start()
     {
+        SoundMgr.In.ChangeBGM("Happy_Mistake_-_RKVC");
+
         HomeBtn.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("SelectStageScene");
@@ -140,6 +142,8 @@ public class AntGameScene : Mgr
             RaycastHit2D hit = Physics2D.Raycast(MousePos, transform.forward, 10.0f, ClearLayer);
             if (hit)
             {
+                SoundMgr.In.PlaySound("Balloon_Pop");
+
                 Instantiate(balloonburst, new Vector2(hit.collider.gameObject.transform.position.x, hit.collider.gameObject.transform.position.y + hit.collider.gameObject.GetComponent<BoxCollider2D>().offset.y), Quaternion.identity);
                 Destroy(hit.collider.gameObject);
             }
@@ -165,6 +169,8 @@ public class AntGameScene : Mgr
         {
             if ((Mathf.Abs(MousePos.x) < Mathf.Abs(AntZone.bounds.extents.x) && Mathf.Abs(MousePos.y) < Mathf.Abs(AntZone.bounds.extents.y)) && SelectNum == PickNum)
             {
+                SoundMgr.In.PlaySound("Succes");
+
                 Debug.Log("Yes");
                 foreach (Transform Child in Ants.transform)
                 {
@@ -179,6 +185,8 @@ public class AntGameScene : Mgr
 
             else
             {
+                SoundMgr.In.PlaySound("Fail");
+
                 Bread[PickNum - 1].transform.DOMove(BreadPos[PickNum - 1].transform.position, ShowTime / 2);
                 StartCoroutine(AnimatorSet(AntState.Surprise));
 

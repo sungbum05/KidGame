@@ -48,6 +48,7 @@ public class SelectStageMgr : MonoBehaviour
 
     private void Start()
     {
+        SoundMgr.In.ChangeBGM("Rainbow_Forest_-_Quincas_Moreira");
         StartCoroutine(FadeIn());
     }
 
