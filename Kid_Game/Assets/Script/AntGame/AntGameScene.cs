@@ -53,6 +53,17 @@ public class AntGameScene : Mgr
     [SerializeField]
     Sprite AntChangeImg;
 
+    [SerializeField]
+    bool OnOption = false;
+
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +73,11 @@ public class AntGameScene : Mgr
         });
         HomeBtn.gameObject.SetActive(false);
 
+        RetryBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+
         StartCoroutine(StartGame());
     }
 
@@ -70,12 +86,12 @@ public class AntGameScene : Mgr
     {
         ProgressSetting();
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && OnOption == false)
         {
             MouseClick();
         }
 
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && OnOption == false)
         {
             MouseUp();
         }
@@ -279,4 +295,27 @@ public class AntGameScene : Mgr
     {
         yield return base.ClearShow();
     }
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+
+    public void GotoLobby()
+    {
+        SceneManager.LoadScene("SelectStageScene");
+    }
+    #endregion
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 enum DogState
@@ -35,6 +37,8 @@ public class DogGameMgr : Mgr
     GameObject AnswerObject = null;
     [SerializeField]
     GameObject SelectAnwerPos = null;
+    [SerializeField]
+    bool OnOption = false;
 
     [Header("Dog_Mgr_ClearShow")]
     [Space(10)]
@@ -53,21 +57,40 @@ public class DogGameMgr : Mgr
     LayerMask AnswerObjlayerMask;
     Vector2 MousePos;
 
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
+
     // Start is called before the first frame update
     void Start()
     {
+        HomeBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("SelectStageScene");
+        });
+        HomeBtn.gameObject.SetActive(false);
+
+        RetryBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+
         StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && OnOption == false)
         {
             MouseClick();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && OnOption == false)
         {
             MouseUp();
         }
@@ -88,10 +111,13 @@ public class DogGameMgr : Mgr
         else if (StartChk == false) //게임 시작하기 전
         {
             StartCoroutine(AnimatorSet(DogState.Idle));
-            FadePanel.DOFade(0, ShowTime / 1.2f);
             StartChk = true;
 
             BasicSetting();
+
+            FadePanel.DOFade(0, ShowTime / 1.2f);
+            yield return new WaitForSeconds(ShowTime / 1.2f);
+            FadePanel.gameObject.SetActive(false);
         }
         #endregion
 
@@ -252,6 +278,29 @@ public class DogGameMgr : Mgr
 
         yield return new WaitForSeconds(ShowTime * 2);
         yield return base.ClearShow();
+    }
+    #endregion
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+
+    public void GotoLobby()
+    {
+        SceneManager.LoadScene("SelectStageScene");
     }
     #endregion
 }

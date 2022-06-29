@@ -37,6 +37,8 @@ public class Mgr : MonoBehaviour //각 씬 매니져들 상속
     protected LayerMask ClearLayer;
     [SerializeField]
     protected Button HomeBtn;
+    [SerializeField]
+    protected Button RetryBtn;
     #endregion
 
     protected virtual void ProgressSetting()
@@ -79,6 +81,7 @@ public class Mgr : MonoBehaviour //각 씬 매니져들 상속
         Instantiate(MainClearBallon, new Vector3(0, -13.0f, 0), Quaternion.identity);
         yield return new WaitForSeconds(1.0f);
         HomeBtn.gameObject.SetActive(true);
+        RetryBtn.gameObject.SetActive(true);
     } //게임 끝 연출
 
     protected List<T> GetShuffleList<T>(List<T> _list) // 제네릭 리스트를 이용한 리스트 랜덤 셔플 함수

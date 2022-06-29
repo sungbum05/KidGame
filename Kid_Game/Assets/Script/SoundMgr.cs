@@ -74,6 +74,7 @@ public class SoundMgr : SingletonMono<SoundMgr>
         if (!OtherPanel)
         {
             OtherPanel = GameObject.Find("OtherPanel").gameObject;
+            OtherPanel.transform.GetChild(0).transform.GetChild(1).gameObject.GetComponent<Slider>().value = masterVolumeBGM;
         }
 
         else

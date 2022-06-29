@@ -35,6 +35,16 @@ public class SelectStageMgr : MonoBehaviour
     [Space(10)]
     [SerializeField]
     float SceneMoveSpeed = 0;
+    [SerializeField]
+    bool OnOption = false;
+
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
 
     private void Start()
     {
@@ -44,7 +54,7 @@ public class SelectStageMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (StartGamechk == true)
+        if (StartGamechk == true && OnOption == false)
         {
             MouseEvent();
             CameraMove();
@@ -122,4 +132,22 @@ public class SelectStageMgr : MonoBehaviour
 
         MainCamera.transform.position = new Vector3(x, y, z);
     }
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+    #endregion
 }

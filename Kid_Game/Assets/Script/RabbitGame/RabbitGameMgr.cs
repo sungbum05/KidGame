@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 [System.Serializable]
@@ -29,6 +31,8 @@ public class RabbitGameMgr : Mgr
     List<Stage6CanMoveObj> stage6CanMoveObjs = null;
     [SerializeField]
     List<GameObject> SlideObjs = null;
+    [SerializeField]
+    bool OnOption = false;
 
     [Header("Rabbit_Mgr_Mouse")]
     [Space(10)]
@@ -38,20 +42,39 @@ public class RabbitGameMgr : Mgr
     LayerMask Answerlayer;
     Vector2 MousePos;
 
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
+
     void Start()
     {
+        HomeBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("SelectStageScene");
+        });
+        HomeBtn.gameObject.SetActive(false);
+
+        RetryBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+
         StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && OnOption == false)
         {
             MouseClick();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && OnOption == false)
         {
             MouseUp();
         }
@@ -71,8 +94,10 @@ public class RabbitGameMgr : Mgr
         #region 게임 시작 전
         else if (StartChk == false) //게임 시작하기 전
         {
-            FadePanel.DOFade(0, ShowTime / 1.2f);
             StartChk = true;
+            FadePanel.DOFade(0, ShowTime / 1.2f);
+            yield return new WaitForSeconds(ShowTime / 1.2f);
+            FadePanel.gameObject.SetActive(false);
 
             SlideObj();
         }
@@ -194,4 +219,27 @@ public class RabbitGameMgr : Mgr
 
         yield return base.ClearShow();
     }
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+
+    public void GotoLobby()
+    {
+        SceneManager.LoadScene("SelectStageScene");
+    }
+    #endregion
 }

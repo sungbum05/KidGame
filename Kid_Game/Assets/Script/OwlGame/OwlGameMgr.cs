@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 enum OwlState
 {
@@ -28,6 +30,8 @@ public class OwlGameMgr : Mgr
     List<Transform> ObjSpawnPos = null;
     [SerializeField]
     GameObject Owl;
+    [SerializeField]
+    bool OnOption = false;
 
     [Header("Owl_Mgr_Mouse")]
     [Space(10)]
@@ -35,16 +39,35 @@ public class OwlGameMgr : Mgr
     LayerMask layerMask;
     Vector2 MousePos;
 
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
+
     // Start is called before the first frame update
     void Start()
     {
+        HomeBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("SelectStageScene");
+        });
+        HomeBtn.gameObject.SetActive(false);
+
+        RetryBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+
         StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && OnOption == false)
             MouseClick();
     }
 
@@ -63,9 +86,11 @@ public class OwlGameMgr : Mgr
         else if (StartChk == false) //게임 시작하기 전
         {
             StartCoroutine(AnimatorSet(OwlState.Idle));
-            FadePanel.DOFade(0, ShowTime / 1.2f);
 
             StartChk = true;
+            FadePanel.DOFade(0, ShowTime / 1.2f);
+            yield return new WaitForSeconds(ShowTime / 1.2f);
+            FadePanel.gameObject.SetActive(false);
 
             ObjRandomSpawn();
         }
@@ -206,6 +231,29 @@ public class OwlGameMgr : Mgr
             yield return new WaitForSeconds(ShowTime * 5);
             yield return base.ClearShow();
         }
+    }
+    #endregion
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+
+    public void GotoLobby()
+    {
+        SceneManager.LoadScene("SelectStageScene");
     }
     #endregion
 }

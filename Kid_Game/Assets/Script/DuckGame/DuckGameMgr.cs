@@ -11,7 +11,6 @@ public class DuckGameMgr : Mgr
     #region 게임 시작
     [SerializeField]
     private string SelectColor; // 선택된 컬러 받아올 변수
-
     [SerializeField]
     private List<string> g_Color; // 컬러 챗박스에 색깔을 배정할 컬러
 
@@ -22,10 +21,19 @@ public class DuckGameMgr : Mgr
     private List<Sprite> ColorChatBox; // 엄마 오리가 부를 컬러 이미지들
 
     public Dictionary<string, Sprite> ColorChatBoxkDic = new Dictionary<string, Sprite>();
-
-
     [SerializeField]
     private List<Button> BabyDuckBtns; // 애기 오리들 상호 작용 버튼
+
+    [SerializeField]
+    bool OnOption = false;
+
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
     #endregion
 
     private void Awake()
@@ -41,6 +49,11 @@ public class DuckGameMgr : Mgr
             SceneManager.LoadScene("SelectStageScene");
         });
         HomeBtn.gameObject.SetActive(false);
+
+        RetryBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
 
         StartCoroutine(StartGame());
 
@@ -62,7 +75,7 @@ public class DuckGameMgr : Mgr
     {
         ProgressSetting();
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && OnOption == false)
         {
             Debug.Log("Down");
             MouseClick();
@@ -185,4 +198,27 @@ public class DuckGameMgr : Mgr
 
         ChatBox.sprite = ColorChatBoxkDic[SelectColor];
     } // 챗박스 색깔 변경
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+
+    public void GotoLobby()
+    {
+        SceneManager.LoadScene("SelectStageScene");
+    }
+    #endregion
 }

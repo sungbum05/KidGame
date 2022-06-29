@@ -37,6 +37,8 @@ public class TitleMgr : MonoBehaviour
     private Button ExitBtn;
     [SerializeField]
     private Button CloseBtn;
+    [SerializeField]
+    private Button CreditBtn;
 
     [Header("OtherPanel")]
     [SerializeField]
@@ -101,6 +103,7 @@ public class TitleMgr : MonoBehaviour
         StartBtn.GetComponent<Image>().DOFade(0, ShowTiem/2);
         OptionBtn.transform.gameObject.GetComponent<Image>().DOFade(0, ShowTiem / 2);
         ExitBtn.transform.gameObject.GetComponent<Image>().DOFade(0, ShowTiem / 2);
+        CreditBtn.transform.gameObject.GetComponent<Image>().DOFade(0, ShowTiem / 2);
     }
 
     void FadeInObj()

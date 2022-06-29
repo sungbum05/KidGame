@@ -53,6 +53,8 @@ public class SquirrelGameMgr : Mgr
     List<ResultObjClass> ResultObjImgs = null;
     [SerializeField]
     List<ShowObj> Objs = null;
+    [SerializeField]
+    bool OnOption = false;
 
     [Header("SquirrelScene_Mgr_Mouse")]
     [Space(10)]
@@ -64,9 +66,28 @@ public class SquirrelGameMgr : Mgr
     Vector2 MinPos;
     Vector2 MousePos;
 
+    [Header("Buttons")]
+    [SerializeField]
+    private Button OptionBtn;
+
+    [Header("OtherPanel")]
+    [SerializeField]
+    private GameObject OptionPan;
+
     // Start is called before the first frame update
     void Start()
     {
+        HomeBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("SelectStageScene");
+        });
+        HomeBtn.gameObject.SetActive(false);
+
+        RetryBtn.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+
         StartCoroutine(StartGame());
     }
 
@@ -75,12 +96,12 @@ public class SquirrelGameMgr : Mgr
     {
         ProgressSetting();
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && OnOption == false)
         {
             MouseClick();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && OnOption == false)
         {
             MouseUp();
         }
@@ -124,6 +145,10 @@ public class SquirrelGameMgr : Mgr
             StartChk = true;
             CurGameCount++;
 
+            FadePanel.DOFade(0, ShowTime / 1.2f);
+            yield return new WaitForSeconds(ShowTime / 1.2f);
+            FadePanel.gameObject.SetActive(false);
+
             GetShuffleList<ResultObjClass>(ResultObjImgs);
 
             ShuffleObj();
@@ -139,9 +164,10 @@ public class SquirrelGameMgr : Mgr
         #endregion
 
         #region 게임 종료
-        if (ClearChk == true && CurGameCount > MaxGameCount) //게임 끝남
+        if (CurGameCount > MaxGameCount) //게임 끝남
         {
-            StartCoroutine(base.ClearShow());
+            ClearChk = true;
+            StartCoroutine(ClearShow());
         }
         #endregion
     }
@@ -187,6 +213,11 @@ public class SquirrelGameMgr : Mgr
 
             GetShuffleList<ResultObjClass>(ResultObjImgs);
         }
+    }
+
+    protected override IEnumerator ClearShow()
+    {
+        yield return base.ClearShow();
     }
     #endregion
 
@@ -291,6 +322,29 @@ public class SquirrelGameMgr : Mgr
 
         Obj.transform.rotation = Quaternion.Euler(0, 0, 0);
         StopCoroutine(ObjListProduce(Obj, type));
+    }
+    #endregion
+
+    #region 설정 창 관리
+    public void OptionPanOnOff()
+    {
+        if (OptionPan.active)
+        {
+            OnOption = false;
+            OptionPan.SetActive(false);
+        }
+
+
+        else
+        {
+            OnOption = true;
+            OptionPan.SetActive(true);
+        }
+    }
+
+    public void GotoLobby()
+    {
+        SceneManager.LoadScene("SelectStageScene");
     }
     #endregion
 }
